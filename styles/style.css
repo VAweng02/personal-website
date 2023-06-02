@@ -364,7 +364,8 @@ body {
 }
 
 .skills__content {
-  background-color: var(--color-bg-secondary);
+  border-radius: 5%;
+  background-color: #2a2e35;
   box-shadow: var(--box-shadow);
   padding: 3rem;
 }
@@ -381,6 +382,81 @@ body {
 .skills__item i {
   color: var(--color-primary);
 }
+
+
+
+
+
+
+
+/* Timeline
+--------------------------------------------------------------*/
+.timeline {
+  display: grid;
+  flex: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 5rem;
+  grid-column-gap: 25rem;
+  padding-bottom: 3rem;
+}
+.timeline .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(light gray);
+  width: 100%
+}
+.timeline .timeline-item .tl-icon {
+  color: white;
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background-color: var(--color-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline .timeline-item .tl-icon i {
+  font-size: 1.8rem;
+}
+.timeline .timeline-item .tl-duration {
+  color: white;
+  padding: 0.4rem 0.8rem;
+  background-color: #2a2e35;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.timeline .timeline-item h5 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.timeline .timeline-item h5 span {
+  color: #b2becd;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.timeline .timeline-item p {
+  color: #b2becd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Qualification
 --------------------------------------------------------------*/
