@@ -100,10 +100,10 @@ sr.reveal(".qualification__footer .btn, .contact__btn", { origin: "right" });
 // Wait for the page to load
 window.addEventListener('DOMContentLoaded', (event) => {
   // Get the element with the "hero__title" class
-  const titleElement = document.querySelector('.hero__title');
+  const titleElement = document.querySelector('.hero_top_title');
 
   // Set the desired text for the typing effect
-  const text = "Hi, I am Vincent,\nWelcome!";
+  const text = "Hello, Welcome! I am...";
 
   // Set the initial text content of the element to an empty string
   titleElement.textContent = '';
