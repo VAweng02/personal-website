@@ -121,3 +121,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   }, 100); // Adjust the typing speed by changing the interval time (in milliseconds)
 });
+
+
+// Add fade-in class to timeline items when the page is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const timelineItems = document.querySelectorAll('.timeline .timeline-item');
+  timelineItems.forEach(function(item) {
+    item.classList.add('fade-in');
+  });
+});

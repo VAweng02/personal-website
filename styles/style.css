@@ -393,17 +393,35 @@ body {
 --------------------------------------------------------------*/
 .timeline {
   display: grid;
-  flex: space-between;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 5rem;
   grid-column-gap: 25rem;
   padding-bottom: 3rem;
 }
+
 .timeline .timeline-item {
   position: relative;
   padding-left: 3rem;
-  border-left: 1px solid var(light gray);
-  width: 100%
+  border-left: 1px solid var(--light-gray);
+  width: 100%;
+  opacity: 0; /* Initially set the opacity to 0 */
+  transform: translateY(100px); /* Initially move the item 30px down */
+  transition: opacity 2.5s ease, transform 2.5s ease; /* Apply transitions to opacity and transform properties */
+}
+
+.timeline .timeline-item.fade-in {
+  opacity: 1; /* Change the opacity to 1 to fade the item in */
+  transform: translateY(0); /* Change the transform to move the item to its original position */
+}
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr; /* Change to a single column for smaller screens */
+    grid-column-gap: 10rem; /* Adjust the column gap for smaller screens */
+  }
+
+  .timeline .timeline-item {
+    padding-left: 1.5rem; /* Adjust the padding for smaller screens */
+  }
 }
 .timeline .timeline-item .tl-icon {
   color: white;
@@ -417,6 +435,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .timeline .timeline-item .tl-icon {
+    width: 40px; /* Adjust the width for smaller screens */
+    height: 40px; /* Adjust the height for smaller screens */
+    left: -25px; /* Adjust the position for smaller screens */
+  }
 }
 .timeline .timeline-item .tl-icon i {
   font-size: 1.8rem;
@@ -506,36 +531,9 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Services
---------------------------------------------------------------*/
-.service__card {
-  background-color: var(--color-bg-secondary);
-  box-shadow: var(--box-shadow);
-  padding: 5rem 3.5rem;
-  width: 100%;
-  max-width: 30rem;
-  justify-self: center;
-  transition: var(--transition);
-}
 
-.service__card:hover {
-  background-color: var(--color-primary);
-}
 
-.service__card:hover .service__link {
-  color: var(--color-white);
-}
 
-.service__icon {
-  font-size: 3.5rem;
-  color: var(--color-white);
-  margin-bottom: 1.5rem;
-}
-
-.service__title {
-  font-size: var(--fs-lg);
-  margin-bottom: 3rem;
-}
 
 /* Projects
 --------------------------------------------------------------*/
@@ -547,6 +545,9 @@ body {
 
 .project__img {
   margin-bottom: 2rem;
+  width: 100%; /* Optional: Set a width for the images */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Adjusts the image to cover the container while preserving aspect ratio */
 }
 
 .project__title {
@@ -573,6 +574,12 @@ body {
   color: var(--color-primary);
   column-gap: 1rem;
 }
+
+
+
+
+
+
 
 /* Testimonials
 --------------------------------------------------------------*/
@@ -630,6 +637,7 @@ body {
 
 /* Contact
 --------------------------------------------------------------*/
+/*
 .contact__wrapper {
   border-top: 1px solid var(--color-border);
   padding-top: 3rem;
@@ -649,6 +657,109 @@ body {
 .contact__description {
   margin-bottom: 2rem;
 }
+*/
+
+.contact-content-con {
+  display: flex;
+  padding-top: 3.5rem;
+}
+.contact-content-con .left-contact {
+  flex: 2;
+}
+.contact-content-con .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-con .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-content-con .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .left-contact .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-content-con .left-contact .contact-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: all 0.4s ease-in-out;
+}
+.contact-content-con .left-contact .contact-icon a:hover {
+  background-color: var(--color-secondary);
+}
+.contact-content-con .left-contact .contact-icon a:hover i {
+  color: var(--color-primary);
+}
+.contact-content-con .left-contact .contact-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.contact-content-con .right-contact {
+  flex: 3;
+  margin-left: 3rem;
+}
+.contact-content-con .right-contact .input-control {
+  margin: 1.5rem 0;
+}
+.contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
+  border-radius: 30px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-grey-5);
+  width: 100%;
+  color: var(--color-white);
+  resize: none;
+}
+.contact-content-con .right-contact .i-c-2 {
+  display: flex;
+}
+.contact-content-con .right-contact .i-c-2 :last-child {
+  margin-left: 1.5rem;
+}
+.contact-content-con .right-contact .submit-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
 
 /* Footer
 --------------------------------------------------------------*/
@@ -698,6 +809,17 @@ body {
   padding-top: 3rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* Scrollbar
 --------------------------------------------------------------*/
 ::-webkit-scrollbar {
@@ -714,6 +836,17 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-primary);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Breakpoints
 --------------------------------------------------------------*/
@@ -791,9 +924,8 @@ body {
   }
 
   .qualification__content,
-  .service__wrapper,
   .project__wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .contact__wrapper {

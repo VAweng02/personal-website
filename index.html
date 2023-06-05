@@ -31,6 +31,11 @@
 
     <!--=================== Header ====================-->
     <header id="header" class="header">
+        <script src="particles.js"></script>
+        <div id="particles">
+
+
+        </div>
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="nav__brand">
@@ -46,9 +51,6 @@
                         </li>
                         <li class="nav__item">
                             <a href="#qualification" class="nav__link">Qualification</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#service" class="nav__link">Services</a>
                         </li>
                         <li class="nav__item">
                             <a href="#project" class="nav__link">Projects</a>
@@ -72,8 +74,10 @@
                 <div class="d-grid hero__wrapper">
                     <div class="hero__content">
                         <h1 class="hero__title"></h1>
-                        <p class="hero__description">I'm a driven and dedicated software developer with a passion for crating efficient and effective solutions.
-                            I strive to deliver high-quality and user-friendly software that meets the needs of clients and end-users. Let's work together to bring your next project to life.
+                        <p class="hero__description"> I am a rising senior at the University of Michigan majoring in Data Science and Economics. 
+                            I have a passion for leveraging machine learning and data analytics to drive business outcomes. 
+                            With experience in natural language processing, computer vision, exploratory data analysis, and programming, 
+                            I am able to handle all stages of the data science lifecycle, from data collection and cleaning to modeling and deployment!
                         </p>
                         <div class="hero__info">
                             <div class="hero__info-wrapper">
@@ -108,7 +112,7 @@
                         <a href="#project" class="btn btn--primary">Know More</a>
                     </div>
                     <div class="skills">
-                        <h3 class="skills__title">Technologies I've been working with:</h3>
+                        <h3 class="skills__title">Some of my Skills Include...</h3>
                         <div class="skills__wrapper">
                             <div class="skills__content">
                                 <h4 class="skills__subtitle">Languages</h4>
@@ -193,7 +197,7 @@
                                 <i class="fas fa-briefcase"></i>
                             </div>
                             <p class="tl-duration">Feb. 2023 - May. 2023</p>
-                            <h5>Data Sciece Intern<span> - Data Glacier</span></h5>
+                            <h5>Data Science Intern<span> - Data Glacier</span></h5>
                             <p>
                                 Performed data analysis on a bank marketing campaign dataset to uncover valuable insights into customer behaviors to inform feature engineering and ensure optimal data for a binary ML classification model.
                             </p>
@@ -203,7 +207,7 @@
                                 <i class="fas fa-briefcase"></i>
                             </div>
                             <p class="tl-duration">Jun. 2022 - Aug. 2022</p>
-                            <h5>Data Sciece Intern<span> - Ipsos North America</span></h5>
+                            <h5>Data Science Intern<span> - Ipsos North America</span></h5>
                             <p>
                                 Built a Python image processor that uploaded 3,500+ images to Amazon S3 and updated client database in MySQL.
                             </p>
@@ -296,42 +300,6 @@
             </div>
         </section>
 
-        <!--=================== services ====================-->
-        <section id="service" class="section service">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Services</h2>
-                    <span class="section__subtitle">What I do</span>
-                </div>
-                <div class="d-grid service__wrapper">
-                    <!--========= service card 1 =========-->
-                    <div class="service__card">
-                        <div class="service__icon">
-                            <i class="ri-layout-4-fill"></i>
-                        </div>
-                        <h3 class="service__title">Frontend<br>Development</h3>
-                        <a href="#" class="service__link">Know More</a>
-                    </div>
-                    <!--========= service card 2 =========-->
-                    <div class="service__card">
-                        <div class="service__icon">
-                            <i class="ri-code-s-slash-line"></i>
-                        </div>
-                        <h3 class="service__title">Backend<br> Development</h3>
-                        <a href="#" class="service__link">Know More</a>
-                    </div>
-                    <!--========= service card 3 =========-->
-                    <!-- <div class="service__card">
-                        <div class="service__icon">
-                            <i class="ri-pen-nib-fill"></i>
-                        </div>
-                        <h3 class="service__title">UI/UX<br> Design</h3>
-                        <a href="#" class="service__link">Know More</a>
-                    </div> -->
-                </div>
-            </div>
-        </section>
-
         <!--=================== Projects ====================-->
         <section id="project" class="section project">
             <div class="container">
@@ -342,35 +310,74 @@
                 <div class="d-grid project__wrapper">
                     <!--============== project 1 =============-->
                     <div class="project__content">
-                        <img src="assets/img/project2.png" alt="Agency Website" class="project__img">
-                        <h3 class="project__title">NFT Website</h3>
-                        <p class="project__description">NFT website is adaptable to all devices, with 
-                        ui components and animated interactions.</p>
+                        <img src="img/reddit.webp" alt="Agency Website" class="project__img">
+                        <h3 class="project__title">Reddit Forum Classifier</h3>
+                        <p class="project__description"> NLP model classifying reddit text speech into happy, sad, 
+                            and neutral moods in online forums.</p>
                         <a href="#" class="project__link">View Project
                             <i class="ri-arrow-right-line"></i></a>
                     </div>
                     <!--============== project 2 =============-->
                     <div class="project__content">
-                        <img src="assets/img/project3.png" alt="Crypto Application " class="project__img">
-                        <h3 class="project__title">Modern Hotel Page</h3>
-                        <p class="project__description">Restaurant Landing page adaptable to all devices, 
-                        with ui components and animated interactions.</p>
+                        <img src="img/galaxy.png" alt="Crypto Application " class="project__img">
+                        <h3 class="project__title">Galaxy Classifier</h3>
+                        <p class="project__description">Deep learning computer vision that utilizes convolutional neural networks 
+                            to classify images into galaxy classes.</p>
                         <a href="https://github.com/MuneneCalvin/100-Days-Of-Code/tree/main/Month%201/Week%2001/Day%2005" class="project__link">View Project
                             <i class="ri-arrow-right-line"></i></a>
                     </div>
                     <!--============== project 3 =============-->
                     <div class="project__content">
-                        <img src="assets/img/project4.png" alt="Ecommerce Website" class="project__img">
-                        <h3 class="project__title">Website Landing Page</h3>
-                        <p class="project__description">Website dashboard adaptable to all devices, 
-                        with ui components and animated interactions.</p>
+                        <img src="img/dog.jpg" alt="Ecommerce Website" class="project__img">
+                        <h3 class="project__title">Dog Breed Classifier</h3>
+                        <p class="project__description">Convolutional neural network that categorizes images into 10 dog breeds classes.</p>
                         <a href="https://github.com/MuneneCalvin/100-Days-Of-Code/tree/main/Month%201/Week%2001/Day%2006" class="project__link">View Project
                             <i class="ri-arrow-right-line"></i></a>
                     </div>
                     <!-- ============== project 4 ============= -->
                     <div class="project__content">
-                        <img src="assets/img/preview_5.png" alt="Crypto Application " class="project__img">
-                        <h3 class="project__title">Modern Portfolio</h3>
+                        <img src="img/star_wars.jpg" alt="Crypto Application " class="project__img">
+                        <h3 class="project__title">Star Wars Episode X: A New Heap</h3>
+                        <p class="project__description">Portfolio responsive to all devices, 
+                        with ui components and smooth scroll.</p>
+                        <a href="#" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="project__content">
+                        <img src="img/euchre.jpg" alt="TODO " class="project__img">
+                        <h3 class="project__title">Game of Euchre</h3>
+                        <p class="project__description">Portfolio responsive to all devices, 
+                        with ui components and smooth scroll.</p>
+                        <a href="#" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="project__content">
+                        <img src="img/pokemon.jpg" alt="TODO " class="project__img">
+                        <h3 class="project__title">Gotta Catch 'em All!</h3>
+                        <p class="project__description">Portfolio responsive to all devices, 
+                        with ui components and smooth scroll.</p>
+                        <a href="#" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="project__content">
+                        <img src="img/battleship.avif" alt="TODO " class="project__img">
+                        <h3 class="project__title">Battleship Stimulation</h3>
+                        <p class="project__description">Portfolio responsive to all devices, 
+                        with ui components and smooth scroll.</p>
+                        <a href="#" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="project__content">
+                        <img src="img/image.jpg" alt="TODO " class="project__img">
+                        <h3 class="project__title">Image Processor</h3>
+                        <p class="project__description">Portfolio responsive to all devices, 
+                        with ui components and smooth scroll.</p>
+                        <a href="#" class="project__link">View Project
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="project__content">
+                        <img src="img/piazza.png" alt="TODO " class="project__img">
+                        <h3 class="project__title">Image Processor</h3>
                         <p class="project__description">Portfolio responsive to all devices, 
                         with ui components and smooth scroll.</p>
                         <a href="#" class="project__link">View Project
@@ -427,6 +434,110 @@
         </section>
 
         <!--=================== Contact ====================-->
+
+
+        <section class="container contact" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <h4>Contact me here</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            In, laborum numquam? Quam excepturi perspiciatis quas quasi.
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location</span>
+                                </div>
+                                <p>
+                                    : London, united Kingdom
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </div>
+                                <p>
+                                    <span>: maclinzuniversal@gmail.com</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Education</span>
+                                </div>
+                                <p>
+                                    <span>: Sussex University, East Sussex</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Mobile Number</span>
+                                </div>
+                                <p>
+                                    <span>: 07522670617</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Languages</span>
+                                </div>
+                                <p>
+                                    <span>: Afrikaans, English, Spanish</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-icon">
+                                <a href="www.facebook.com" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-contact">
+                        <form action="" class="contact-form">
+                            <div class="input-control i-c-2">
+                                <input type="text" required placeholder="YOUR NAME">
+                                <input type="email" required placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" required placeholder="ENTER SUBJECT">
+                            </div>
+                            <div class="input-control">
+                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <a href="#" class="main-btn">
+                                    <span class="btn-text">Download CV</span>
+                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!--
         <section id="contact" class="section contact">
             <div class="container">
                 <div class="d-grid contact__wrapper">
@@ -445,7 +556,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main> -->
     <!--=================== footer ====================-->
     <footer id="footer" class="footer">
         <div class="container">
