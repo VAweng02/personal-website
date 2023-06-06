@@ -366,6 +366,7 @@ body {
 }
 
 .skills__title {
+  color: var(--color-primary);
   font-size: var(--fs-lg);
   text-align: center;
   margin-bottom: 3rem;
@@ -385,10 +386,12 @@ body {
 }
 
 .skills__item {
+  color: rgb(189, 187, 187);
   margin-bottom: 1rem;
 }
 
 .skills__subtitle {
+  font-size: 1.75rem;
   text-align: center;
   margin-bottom: 2rem;
 }
