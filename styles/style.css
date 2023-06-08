@@ -427,73 +427,64 @@ body {
   }
 }
 
-.timeline-item .tl-icon {
-  color: white;
-  position: absolute;
-  left: 0px;
-  top: 0;
-  background-color: var(--color-primary);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.timeline-item .timeline-first-line {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 0.5rem;
 }
-@media (max-width: 768px) {
-  .timeline-item .tl-icon {
-    width: 40px; /* Adjust the width for smaller screens */
-    height: 40px; /* Adjust the height for smaller screens */
-    left: -25px; /* Adjust the position for smaller screens */
-  }
-}
-.timeline-item .tl-icon i {
-  font-size: 1.8rem;
-}
-.timeline-item .tl-duration {
-  left: 5rem;
-  position: absolute;
-  top: 0.8rem; 
+
+.timeline-first-line .tl-duration {
   color: white;
   padding: 0.4rem 0.8rem;
   background-color: #2a2e35;
   border-radius: 15px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.timeline-first-line .timeline-link  {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.timeline-first-line .timeline-link:hover {
+  color: var(--color-primary);
+  column-gap: 1rem;
+}
+
+
+
+
+
+
+
 .timeline-item h5 {
+  margin-top: 0.5rem;
   padding-top: 1rem;
   color: white;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
+
 .timeline-item h5 span {
   color: #b2becd;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .timeline-item p {
   color: #b2becd;
 }
 
-.timeline-link {
-  padding-top: 20px;
-  font-size: var(--fs-sm);
-  text-transform: uppercase;
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  column-gap: 0.5rem;
-  transition: var(--transition);
-}
 
-.timeline-link:hover {
-  color: var(--color-primary);
-  column-gap: 1rem;
-}
 
 
 
@@ -511,21 +502,33 @@ body {
 /* Qualification
 --------------------------------------------------------------*/
 .qualification__wrapper {
-  display: grid;
-  margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 5rem;
+    gap: 10rem;
 }
 
-.qualification__content{
-  display: flex;
+@media (max-width: 768px) {
+  .qualification__wrapper {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+.qualification__wrapper .qualification__section {
+    display: grid;
+}
+
+.qualification__wrapper .qualification__section .qualification__content{
   row-gap: 5rem;
   column-gap: 5rem;
 }
 
-.qualification__name {
+.qualification__wrapper .qualification__section .qualification__name {
   display: flex;
   column-gap: 1rem;
   font-size: var(--fs-lg);
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -535,6 +538,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .education__img {
@@ -551,11 +555,12 @@ body {
 }
 
 .qualification__description {
+  font-size: 1.5rem;
   color: rgb(189, 187, 187);
   margin-bottom: 2rem;
 }
 
-..qualification__date {
+.qualification__date {
   font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
 }
@@ -598,11 +603,14 @@ body {
 .project__content .project__title {
   color: var(--color-white);
   font-size: 1.75rem;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 .project__content .project__description {
-  font-size: 1.25rem;
+  color: rgb(189, 187, 187);
+  font-size: 1.3rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -617,6 +625,8 @@ body {
   background-color: var(--color-primary);
   color: var(--color-white);
   text-align: center;
+  align-self: center;
+  transform: translate(50%, 0%);
 }
 
 .project__content .project__link:hover {
@@ -893,9 +903,6 @@ body {
 
 
 
-
-
-
 /* Breakpoints
 --------------------------------------------------------------*/
 
@@ -969,6 +976,7 @@ body {
 /* Large devices */
 
 @media screen and (min-width: 968px) {
+
   .about__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
