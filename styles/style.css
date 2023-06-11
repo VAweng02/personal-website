@@ -220,6 +220,7 @@ body {
 }
 
 .nav__link {
+  color: rgb(189, 187, 187);
   transition: var(--transition);
 }
 
@@ -344,6 +345,7 @@ body {
 
 /* About
 --------------------------------------------------------------*/
+
 .about__content {
   max-width: 60rem;
   margin: auto;
@@ -357,6 +359,7 @@ body {
 }
 
 .about__description {
+  color: rgb(189, 187, 187);
   margin-bottom: 3rem;
 }
 
@@ -365,10 +368,8 @@ body {
   justify-self: center;
 }
 
-.skills__title {
-  color: var(--color-primary);
+.skills .skills__title {
   font-size: var(--fs-lg);
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -383,6 +384,7 @@ body {
   background-color: #2a2e35;
   box-shadow: var(--box-shadow);
   padding: 3rem;
+  flex: 1;
 }
 
 .skills__item {
@@ -414,7 +416,6 @@ body {
   position: relative;
   padding: 2rem;
   border-left: 1px solid var(--light-gray);
-  width: 100%;
 }
 
 .timeline-item .timeline-link {
@@ -460,10 +461,9 @@ body {
   padding: 0.4rem 0.8rem;
   background-color: #2a2e35;
   border-radius: 15px;
-  font-size: 1.4rem;
-  text-transform: uppercase;
+  font-size: 1.25rem;
   font-weight: 500;
-  transform: translateY(-15%);
+  transform: translateY(-22%);
 }
 
 .timeline-link  {
@@ -494,7 +494,7 @@ body {
   align-items: center;
   color: rgb(189, 187, 187);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 
@@ -582,6 +582,7 @@ body {
 }
 
 .qualification__item .qualification__subtitle .qualification__title {
+  color: rgb(189, 187, 187);
   font-size: var(--fs-md);
   font-weight: var(--fw-medium);
   margin-bottom: 2rem;
@@ -589,18 +590,32 @@ body {
 
 .qualification__description {
   font-size: 1.5rem;
-  color: rgb(189, 187, 187);
+  color: #b2becd;
   margin-bottom: 2rem;
+  font-weight: 500;
+}
+.qualification__description__awards {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .qualification__date {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  background-color: #2a2e35;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transform: translateY(-22%);
 }
 
 .qualification__footer {
   border-top: 1px solid var(--color-border);
-  margin-top: 10rem;
+  margin-top: 1rem;
   padding-top: 4rem;
   text-align: center;
 }
@@ -843,8 +858,6 @@ body {
   display: flex;
   justify-content: flex-start;
 }
-
-
 
 
 
