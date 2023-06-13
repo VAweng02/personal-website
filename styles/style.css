@@ -12,7 +12,7 @@
 
   /* Font & Typography
   ___________________*/
-  --ff-body: "Space Grotesk", sans-serif;
+  --ff-body: "Source Sans Pro", sans-serif;
   /* font sizes */
   --fs-sm: 1.4rem;
   --fs-md: 1.6rem;
@@ -120,7 +120,8 @@ body {
 }
 
 .section__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-);
+  font-size: var(--fs-xxl);
   margin-bottom: 0.5rem;
 }
 
@@ -277,11 +278,13 @@ body {
 /* Hero
 --------------------------------------------------------------*/
 .hero__wrapper {
+  display: grid;
+  gap: 20rem;
   min-height: calc(100vh - var(--height-header));
   padding: 5rem 0;
 }
 
-.hero__content {
+.hero__wrapper .hero__content {
   text-align: center;
 }
 
@@ -292,12 +295,14 @@ body {
 }
 
 .hero_top_title {
+  text-align: left;
   font-size: 3rem;
   margin-bottom: 1rem;
   position: relative;
 }
 
 .hero_bottom_title {
+  text-align: left;
   color: var(--color-primary);
   font-size: 6rem;
   margin-bottom: 5rem;
@@ -305,6 +310,7 @@ body {
 }
 
 .hero__description {
+  text-align: left;
   color: rgb(189, 187, 187);
   margin-bottom: 5rem;
 }
@@ -319,6 +325,7 @@ body {
 }
 
 .hero__info-wrapper {
+  text-align: left;
   box-shadow: var(--box-shadow);
   padding: 0rem;
 }
@@ -337,7 +344,7 @@ body {
   margin-bottom: 5rem;
 }
 
-.hero__img {
+.hero__wrapper .hero__img {
   width: 100%;
   justify-self: center;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5); /* Adjust the values as per your preference */
@@ -346,6 +353,20 @@ body {
 
 /* About
 --------------------------------------------------------------*/
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
+  gap: 10rem;
+}
+
+@media (max-width: 768px) {
+  .about__wrapper {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
 
 .about__content {
   max-width: 60rem;
@@ -364,48 +385,52 @@ body {
   margin-bottom: 3rem;
 }
 
-.skills {
-  max-width: 60rem;
-  justify-self: center;
+.skills .skills__title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--fs-lg);
+  margin-bottom: 1rem;
 }
 
-.skills .skills__title {
-  font-size: var(--fs-lg);
-  margin-bottom: 3rem;
+.skills .skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .qualification__wrapper {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
 }
 
 .skills__wrapper {
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 2rem;
 }
 
 .skills__content {
   border-radius: 5%;
-  background-color: #2a2e35;
   box-shadow: var(--box-shadow);
   padding: 3rem;
   flex: 1;
 }
 
 .skills__item {
+  padding: 1rem;
+  background-color: #2a2e35;
   color: rgb(189, 187, 187);
   margin-bottom: 1rem;
+  border-radius: 10%;
 }
 
 .skills__subtitle {
-  font-size: 1.75rem;
+  font-size: var(--fs-lg);
   text-align: center;
   margin-bottom: 2rem;
 }
-
-.skills__item i {
-  color: var(--color-primary);
-}
-
-
-
-
 
 
 
@@ -492,7 +517,6 @@ body {
 
 .timeline-first-line span {
   display: inline-flex;
-  align-items: center;
   color: rgb(189, 187, 187);
   font-weight: 500;
   font-size: 1.75rem;
@@ -821,7 +845,7 @@ body {
   font-weight: 500;
   text-align: left;
   font-size: var(--fs-sm);
-  color: var(--color-primary);
+  color: white;
   padding-left: 1.1rem;
   padding-top: 1rem;
   margin-bottom: -0.2rem;
@@ -872,8 +896,8 @@ textarea {
 
 button[type="submit"] {
   display: block;
-  width: 100%;
-  padding: 0.5rem;
+  width: 30%;
+  padding: 1rem;
   border: none; 
   background-color: var(--color-primary);
   color: white;
