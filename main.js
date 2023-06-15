@@ -1,7 +1,7 @@
 const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navItem = document.querySelectorAll(".nav__item"),
-  header = document.getElementById("header");
+navToggle = document.getElementById("nav-toggle"),
+navItem = document.querySelectorAll(".nav__item"),
+header = document.getElementById("header");
 
 // open and close menu
 navToggle.addEventListener("click", () => {
@@ -60,15 +60,6 @@ const testimonialSlide = new Swiper(".testimonial__wrapper", {
       slidesPerView: "auto",
     },
   },
-});
-
-// header scroll animation
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    header.classList.add("header--scroll");
-  } else {
-    header.classList.remove("header--scroll");
-  }
 });
 
 // ScrollReveal animations
