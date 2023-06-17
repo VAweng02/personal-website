@@ -277,7 +277,7 @@ body {
 /* Hero
 --------------------------------------------------------------*/
 .hero__wrapper {
-  background: linear-gradient(to left, var(--color-primary) 70%, #CCF381 70%);
+  background: linear-gradient(to left, var(--color-primary) 80%, #CCF381 80%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,17 +349,31 @@ body {
 }
 
 .hero__info {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
   border-top: 1px solid rgb(20, 28, 58);
-  padding-top: 5rem;
-  gap: 10rem;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+@media (max-width: 1400px) {
+  .hero__info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    border-top: 1px solid rgb(20, 28, 58);
+    padding-top: 3rem;
+    gap: 0rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero__info{
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-auto-flow: row;
+    border-top: 1px solid rgb(20, 28, 58);
+    padding-top: 3rem;
+    gap: 0rem;
   }
 }
 
@@ -390,17 +404,16 @@ body {
   width: 20%;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
   align-self: center;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 768px) {
   .hero__content .hero__img {
     width: 0%;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
-    align-self: center;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1128,7 +1141,7 @@ body {
 }
 
 .section-title {
-  font-weight: 500;
+  font-weight: 800;
   text-align: left;
   font-size: medium;
   color: rgb(20, 28, 58);
@@ -1164,11 +1177,16 @@ button[type="submit"] {
   width: 30%;
   padding: 1rem;
   border: none; 
-  background-color:#CCF381;
-  color: white;
+  background-color: white;
+  color: var(--color-primary);
   font-weight: bold;
-  border-radius: 5px;
+  border: solid 1px var(--color-primary);
   cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 
