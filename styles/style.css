@@ -810,6 +810,15 @@ body {
   font-size: large;
 }
 
+@media screen and (max-width: 768px) {
+  .qualification__main_description {
+    color: white;
+    margin-bottom: 7rem;
+    line-height: 1.5;
+    font-size: large;
+  }
+}
+
 .qualification__item .qualification__subtitle {
   display: flex;
   justify-content: flex-start;
@@ -891,6 +900,7 @@ body {
   margin: auto;
   margin-bottom: 2rem;
   text-align: center;
+  padding: 2rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -899,6 +909,7 @@ body {
   padding-top: 3rem;
   color: white;
   font-size: var(--fs-xxl);
+  font-weight: 800;
   margin-bottom: 3rem;
 }
 
@@ -1000,15 +1011,19 @@ body {
 }
 
 .contact-description {
-  gap: 1rem;
-  width: 100%;
+  max-width: 75rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .contact-title {
-  text-align: center;
-  padding-bottom: 1rem;
-  font-size: var(--fs-xxl);
+  padding-top: 3rem;
   color: white;
+  font-size: var(--fs-xxl);
+  margin-bottom: 3rem;
 }
 
 .contact-links {
@@ -1167,7 +1182,7 @@ button[type="submit"] {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .transition__sub {
@@ -1253,7 +1268,7 @@ button[type="submit"] {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary);
+  background-color: #CCF381;
 }
 
 
@@ -1446,6 +1461,7 @@ button[type="submit"] {
     gap: 2rem;
     margin-bottom: 0rem;
     margin-top: 0rem;
+    transform: translateY(-25%);
   }
 }
 
@@ -1475,14 +1491,8 @@ button[type="submit"] {
     gap: 2rem;
     margin-bottom: 0rem;
     margin-top: 0rem;
-    transform: translateY(-25%);
+    transform: translateY(-38%);
   }
-}
-
-.timeline-first-line {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
 }
 
 .timeline-icon {
@@ -1495,9 +1505,9 @@ button[type="submit"] {
 .timeline-icon-shell1 {
   background-color: #CCF381;
   color: white;
-  padding: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 2rem;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
   border-radius: 50%;
 }
 
@@ -1505,26 +1515,26 @@ button[type="submit"] {
   background-color: #CCF381;
   color: white;
   padding: 2rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   border-radius: 50%;
 }
 
 .timeline-icon-shell3 {
   background-color: #CCF381;
   color: white;
-  padding: 1rem;
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
+  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 50%;
 }
 
 .timeline-icon-shell4 {
   background-color: #CCF381;
   color: white;
-  padding: 1rem;
-  padding-left: 2.45rem;
-  padding-right: 2.45rem;
+  padding: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   border-radius: 50%;
 }
 

@@ -74,7 +74,7 @@ sr.reveal(".hero__content, .about__content");
 sr.reveal(".hero__img", { origin: "top" });
 
 sr.reveal(
-  ".hero__info-wrapper, .skills__content, .qualification__name, .qualification__item, .qualication__header, .education__content, .experience__content, .project__header_content, .project__content, .footer__content",
+  ".hero__info-wrapper, .skills__content, .qualification__name, .qualification__item, .qualication__header, .education__content, .timeline-item-right, .timeline-item-left, .project__header_content, .project__content, .footer__content",
   {
     delay: 500,
     interval: 100,
