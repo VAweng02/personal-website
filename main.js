@@ -74,7 +74,7 @@ sr.reveal(".hero__content, .about__content");
 sr.reveal(".hero__img", { origin: "top" });
 
 sr.reveal(
-  ".hero__info-wrapper, .skills__content, .qualification__name, .qualification__item, .qualication__header, .education__content, .timeline-left-side, .timeline-right-side, .project__header_content, .project__content, .footer__content",
+  ".hero__info-wrapper, .skills__content, .qualification__name, .qualification__item, .qualication__header, .education__content, .timeline-left-side, .timeline-right-side, .project__header_content, .project__content, .footer__content, .contact-header, .contact-socials, .form-field, .contact-submit-button",
   {
     delay: 500,
     interval: 100,
