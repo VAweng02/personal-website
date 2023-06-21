@@ -60,6 +60,16 @@ main {
     text-align: center;
     font-weight: 800;
     padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.role {
+    font-size: large;
+    font-weight: 800;
+    font-family: var(--ff-font);
+    color: rgb(20, 28, 58);
+    text-align: center;
 }
 
 .description {
@@ -175,10 +185,32 @@ li {
     transform: translateX(8%);
 }
 
+.link_experience {
+    font-family: var(--ff-font);
+    max-width: 50%;
+    display: inline-block;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: white;
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    border: solid 1px;
+    align-self: center;
+    padding: 1rem 1rem;
+}
+
 .link:hover {
   background-color: var(--color-primary);
   color: white;
 }
+
+.link_experience:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
 
 
 @media (max-width: 768px) {

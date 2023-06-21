@@ -379,7 +379,7 @@ body {
 .hero-left-side {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
 }
 
@@ -391,7 +391,6 @@ body {
   max-width: 100%;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
   margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 @media (max-width: 768px) {
@@ -434,6 +433,8 @@ body {
   margin-bottom: 2rem;
   line-height: 1.5;
   font-size: large;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .skills__wrapper {
