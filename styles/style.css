@@ -1443,6 +1443,10 @@ button[type="submit"]:hover {
   max-width: 50%;
 }
 
+.logo__img {
+  max-width: 10%;
+}
+
 @media (max-width: 800px) {
   .transition__img {
     max-width: 500px;
