@@ -66,14 +66,6 @@ main {
 
 .role {
     font-size: large;
-    font-weight: 800;
-    font-family: var(--ff-font);
-    color: rgb(20, 28, 58);
-    text-align: center;
-}
-
-.description {
-    font-size: medium;
     font-weight: 300;
     font-family: var(--ff-font);
     color: rgb(20, 28, 58);
