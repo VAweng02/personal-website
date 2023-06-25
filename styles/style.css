@@ -450,8 +450,12 @@ body {
   padding-right: 2rem;
 }
 
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
 .skills__wrapper {
-  transform: translateX(5.5%);
   display: flex;
   justify-content: center;
   width: 90%;
@@ -1705,6 +1709,10 @@ button[type="submit"]:hover {
   
   .hero__info {
     max-width: 760px;
+  }
+
+  .skills__wrapper {
+    width: 70%;
   }
 
   .education__qualification__section {
