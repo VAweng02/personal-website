@@ -554,7 +554,7 @@ body {
 
 
 
-/* Edudcation
+/* Education
 --------------------------------------------------------------*/
 .qualification__wrapper {
     background-color: var(--color-primary);
@@ -592,8 +592,8 @@ body {
 
 @media screen and (max-width: 1300px) {
   .qualification__content{
-    padding-left: 6rem;
-    padding-right: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -1677,4 +1677,55 @@ button[type="submit"]:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #CCF381;
+}
+
+
+
+
+
+
+/* Large devices */
+@media screen and (min-width: 1600px) {
+
+  .hero-left-side {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-img-shell {
+    width: 30%;
+    transform: translate(20%, 5%);
+  }
+
+  .hero__wrapper {
+    background: linear-gradient(to left, var(--color-primary) 70%, #CCF381 70%);
+  }
+
+  
+  .hero__info {
+    max-width: 760px;
+  }
+
+  .education__qualification__section {
+    width: 75%;
+  }
+
+  .timeline {
+    justify-self: center;
+    width: 75%;
+  }
+
+  .project__content {
+    width: 45%;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    width: 65%;
+  }
 }
