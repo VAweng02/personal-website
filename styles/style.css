@@ -436,6 +436,8 @@ body {
 
 .about__title {
   padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: white;
   font-size: var(--fs-xxl);
   margin-bottom: 3rem;
@@ -596,8 +598,8 @@ body {
 
 @media screen and (max-width: 1300px) {
   .qualification__content{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -1007,6 +1009,7 @@ body {
   align-items: center;
   width: 90%;
   padding-bottom: 5rem;
+  margin-left: 5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1230,7 +1233,6 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
-  transform: translateX(-10%);
 }
 
 .contact-section {
@@ -1242,10 +1244,9 @@ body {
 }
 
 .contact-description {
+  margin-left: 6rem;
   display: flex;
   justify-content: center;
-  margin-left: 38rem;
-  padding-top: 3rem;
   padding-bottom: 5rem;
   text-align: center;
 }
