@@ -1875,6 +1875,10 @@ button[type="submit"]:hover {
     display: none;
   }
 
+  .qualication__header {
+    max-width: 450px;
+  }
+
   .timeline {
     max-width: 500px;
   }
