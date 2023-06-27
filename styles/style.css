@@ -208,8 +208,7 @@ body {
     row-gap: 1.2rem;
     column-gap: 2rem;
     font-size: medium;
-    transform: translate(-1%, -35%);
-    margin-right: 2.5rem;
+    transform: translate(-29%, -35%);
   }
 }
 
@@ -1802,8 +1801,6 @@ button[type="submit"]:hover {
 
 
 
-
-
 /* Large devices */
 @media screen and (min-width: 1600px) {
 
@@ -1852,4 +1849,26 @@ button[type="submit"]:hover {
   .contact-form {
     width: 65%;
   }
+}
+
+
+
+
+/* Mobile devices */
+@media screen and (max-width: 600px) {
+
+  .footer-links {
+    gap: 0.5rem;
+  }
+
+  .transition__img {
+    max-width: 450px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .corner-image2 {
+    display: none;
+  }
+
 }
