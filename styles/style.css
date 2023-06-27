@@ -1857,6 +1857,10 @@ button[type="submit"]:hover {
 /* Mobile devices */
 @media screen and (max-width: 600px) {
 
+  .nav__list {
+    transform: translate(-23%, -35%);
+  }
+
   .footer-links {
     gap: 0.5rem;
   }
@@ -1871,4 +1875,7 @@ button[type="submit"]:hover {
     display: none;
   }
 
+  .timeline {
+    max-width: 500px;
+  }
 }

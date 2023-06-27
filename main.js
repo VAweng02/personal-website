@@ -64,9 +64,9 @@ const testimonialSlide = new Swiper(".testimonial__wrapper", {
 
 // ScrollReveal animations
 const sr = ScrollReveal({
-  duration: 2000,
+  duration: 1500,
   distance: "100px",
-  delay: 400,
+  delay: 0,
   reset: false,
 });
 
@@ -76,8 +76,8 @@ sr.reveal(".hero__img", { origin: "top" });
 sr.reveal(
   ".hero__info-wrapper, .about__title, about__description, .skills__content, .qualification__name, .qualification__main_description, .resume-link, .qualification__item, .qualication__main, .education__content, .timeline-left-side, .timeline-right-side, .project__header_content, .project__content, .footer__content, .contact-header, .contact-socials, .form-field, .contact-submit-button, .footer-logo-shell, .footer-message, .footer-links-item, .footer-copyright, .transition, .transition_end, .react-logo-shell",
   {
-    delay: 0,
-    interval: 100,
+    delay: 100,
+    interval: 200,
   }
 );
 
