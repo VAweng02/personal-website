@@ -809,6 +809,20 @@ body {
   height: 100%;
 } 
 
+@media (max-width: 700px) {
+  .timeline-line {
+    width: 0%
+  }
+  .timeline-left-side {
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+  .timeline-right-side {
+    padding-left: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .timeline-item {
   background-color: var(--color-primary);
   border-radius: 20px;
@@ -876,6 +890,24 @@ body {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .testing {
+    width: 80%;
+  }
+  .timeline-icon-shell1 {
+    transform: translateX(-740%);
+  }
+  .timeline-icon-shell2 {
+    transform: translateX(30%);
+  }
+  .timeline-icon-shell3 {
+    transform: translateX(-740%);
+  }
+  .timeline-icon-shell4 {
+    transform: translateX(30%);
+  }
 }
 
 .timeline-title {
