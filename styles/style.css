@@ -825,8 +825,6 @@ body {
 
 .timeline-item {
   background-color: var(--color-primary);
-  border-radius: 20px;
-  border: 0.5px solid var(--color-primary);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -892,21 +890,21 @@ body {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .testing {
     width: 80%;
   }
   .timeline-icon-shell1 {
-    transform: translateX(-740%);
+    transform: translateX(-2000%);
   }
   .timeline-icon-shell2 {
-    transform: translateX(30%);
+    transform: translateX(-2000%);
   }
   .timeline-icon-shell3 {
-    transform: translateX(-740%);
+    transform: translateX(-2000%);
   }
   .timeline-icon-shell4 {
-    transform: translateX(30%);
+    transform: translateX(-2000%);
   }
 }
 
