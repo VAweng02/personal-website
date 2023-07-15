@@ -1269,14 +1269,15 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
 }
 
 .posts_grid {
-  width: 50%;
+  width: 60%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  column-gap: 5rem;
 }
 
 .posts {
@@ -1286,15 +1287,24 @@ body {
 
 .posts_title {
   margin: 2rem;
+  color: #CCF381;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.posts_date {
+  margin: 2rem;
   color: white;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
 .posts__img {
   width: 100%;
-  height: 70%;
+  height: 60%;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1000px) {
