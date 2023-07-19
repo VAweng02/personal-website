@@ -608,6 +608,7 @@ body {
   flex-direction: column;
   flex: 1;
   gap: 2rem;
+  padding-right: 3rem;
 }
 
 .education-icon {
@@ -644,7 +645,7 @@ body {
 
 .education__content__title {
   padding-left: 0.5rem;
-  font-size: x-large;
+  font-size: 2rem;
   font-weight: 800;
   color: #CCF381;
 }
@@ -1227,7 +1228,7 @@ body {
 /* Blog
 --------------------------------------------------------------*/
 .blog__wrapper {
-  background-color: var(--color-primary);
+  background: linear-gradient(var(--color-primary) 50%, white 50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1281,24 +1282,31 @@ body {
 }
 
 .posts {
+  border-radius: 20px;
+  border: 0.5px solid var(--color-primary);
+  padding: 3rem;
+  flex-basis: 0;
+  flex-grow: 1;
   width: 100%;
-  padding: 2rem;
 }
 
 .posts_title {
-  margin: 2rem;
   color: #CCF381;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 2rem;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
   text-align: center;
-  font-size: 2.25rem;
-  font-weight: 800;
 }
 
 .posts_date {
-  margin: 2rem;
   color: white;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 800;
+  padding: 2rem;
+  padding-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .posts__img {
@@ -1323,11 +1331,11 @@ body {
   width: 50%;
   display: inline-block;
   padding: 1rem 1rem;
-  color: var(--color-white);
+  color: white;
+  background-color: var(--color-primary);;
   font-weight: var(--fw-semibold);
   font-size: 1.5rem;
   transition: var(--transition);
-  color: white;
   text-align: center;
   font-weight: 500;
   border: solid 1px white;
