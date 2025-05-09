@@ -1,792 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/VV.png" sizes="16x16" type="img/VV.png">
-    <title>Vincent Weng</title>
-    <!--=================== Google Fonts ====================-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
-    <!--=================== Remixicons ====================-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!--=================== SwiperJS CSS ====================-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-
-    <!--=================== Main CSS ====================-->
-    <link rel="stylesheet" href="styles/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!--=================== Main ====================-->
-    <main class="main">
-        <!--=================== Hero ====================-->
-        <div class="hero__wrapper">
-            <img src="/img/VV.png" class="corner-image1">
-            <img src="/img/VV (1).png" class="corner-image2">
-            <div class="hero-container">
-                <div class="hero-left-side">
-                    <div class="hero-img-shell">
-                        <img src="/img/profile.png" class="hero__img">
-                    </div>
-                </div>
-                <div class="hero-right-side">
-                    <header id="header" class="header">
-                        <nav class="nav">
-                            <div class="nav__menu" id="nav-menu">
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a href="#about" class="nav__link">About</a>
-                                    </li>
-                                    <!--
-                                    <li class="nav__item">
-                                        <a href="#education" class="nav__link">Education</a>
-                                    </li>
-                                    -->
-                                    <li class="nav__item">
-                                        <a href="#experience" class="nav__link">Experience</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#project" class="nav__link">Portfolio</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#blog" class="nav__link">Blog</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#contact"  class="nav__link">Contact</a>
-                                    </li>
-                                    <!--
-                                    <li class="nav__item">
-                                        <a href="https://drive.google.com/file/d/1-cviBIuXOlOEPLAmqINhzre-VSFSoytQ/view?usp=sharing"  class="nav__link" target="blank_">Resume</a>
-                                    </li>
-                                    -->
-                                </ul>
-                            </div>
-                            <div class="nav__toggle">
-                                <i id="nav-toggle" class="ri-menu-3-line"></i>
-                            </div>
-                        </nav>
-                    </header>
-                    <div class="hero-right-container">
-                        <div class="hero__content">
-                            <h1 class="hero_bottom_title"> Hello! <br> I am Vincent. </h1>
-                            <p class="hero__description"> Data Science + Economics @ University of Michigan </p>
-                            <div class="hero__info">
-                                <div class="hero__info-wrapper">
-                                    <p class="hero__info-number">04</p>
-                                    <h2 class="hero__info-title">Years of<br>Academics</h2>
-                                </div>
-                                <div class="hero__info-wrapper">
-                                    <p class="hero__info-number">03</p>
-                                    <h2 class="hero__info-title">Internships<br>Completed</h2>
-                                </div>
-                                <div class="hero__info-wrapper">
-                                    <p class="hero__info-number">01</p>
-                                    <h2 class="hero__info-title">Research<br>Completed</h2>
-                                </div>
-                                <div class="hero__info-wrapper">
-                                    <p class="hero__info-number">25</p>
-                                    <h2 class="hero__info-title">Projects<br>Completed</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="img/profile.jpeg" alt="Your photo" class="profile-pic">
+      <h1>Vincent Weng</h1>
+
+      <p class="role">Recent M.S. Data Science Graduate @ UMich</p>
+      <p class="location">Based in Ann Arbor, MI</p>
+      
+      <!-- TO ADD
+      <p class="role">Data Scientist @ Meta</p>
+      <p class="location">Based in Menlo Park, CA</p>
+      -->
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
+        <a href="mailto:vincentweng011@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    
+      <!-- About section -->
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          Recent M.S. Data Science graduate from the University of Michigan with a passion in MLOps, 
+          AI automation, and quantitative modeling. 
+        </p>
+      </section>
+    
+      <!-- Skills section -->
+      <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">SQL</span>
+          <span class="tag">C++</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Scikit-Learn</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">SnowFlake</span>
         </div>
-        <div class="transition">
-            <div class="transition__sub">
-                <img src="/img/computer.png" alt="Shawn" class="transition__img">
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+
+    <main class="content">
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="img/llm.png" alt="LLM project image" class="project-image">
+            <h3 class="project-title">Detecting LLM Hallucinations</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">API</span>
             </div>
+            <p class="project-description">
+              Investigated why LLMs hallucinate using a graph-based evaluation framework with controlled prompts to 
+              observe inferences.
+            </p>
+            <a href="https://github.com/lxguan1/KG_Hallucination_Categorization" target="_blank" class="read-more">Read more →</a>
+          </div>
+          
+          <div class="project-card">
+            <img src="img/reddit.png" alt="Reddit project image" class="project-image">
+            <h3 class="project-title">Reddit Forum Classifier</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">scikit-learn</span>
+            </div>
+            <p class="project-description">
+              Natural language processing model that classifies reddit text speech into happy, sad, and neutral moods.
+            </p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+
+          <div class="project-card">
+            <img src="img/image.png" alt="Galaxy project image" class="project-image">
+            <h3 class="project-title">Galaxy Classifier</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">TensorFlow</span>
+            </div>
+            <p class="project-description">
+              A deep learning computer vision project designed to classify galaxy images using convolutional neural networks.
+            </p>
+            <a href="https://github.com/VAweng02/eecs442-final-project" target="_blank" class="read-more">Read more →</a>
+          </div>
+
         </div>
+      </section>
 
-        <!--=============================================================================================================================================-->
-
-
-        <!--=================== About ====================-->
-        <section id="about" class="section about">
-            <div class="about__container">
-                <div class="section__header">
-                    <h2 class="section__title">About Me</h2>
-                    <span class="section__subtitle">Get to know me!</span>
-                </div>
-                <div class="about__wrapper">
-                    <div class="about__content">
-                        <h3 class="about__title">I have 3+ years of experience in both data science and software development.</h3>
-                        <p class="about__description"> 
-                            I am quick to adapt to new tools and stay up-to-date with the latest technology trends. 
-                            I love constantly improving my skills to provide innovative solutions and deliver high-quality results.
-                        </p>
-                    </div>
-                    <div class="skills">
-                        <div class="skills__wrapper">
-                            <div class="skills__content">
-                                <div class="skills__icon">
-                                    <div class="skills__icon__shell1">
-                                        <i class="fa fa-pen" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                                <div class="skills__title">
-                                    Software Programming
-                                </div>
-                                <div class="skills__description">
-                                    I am passionate about crafting inclusive and accessible products using various programming languages.
-                                </div>
-                                <h4 class="skills__subtitle">Languages:</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item"> Python </li>
-                                    <li class="skills__item"> Java </li>
-                                    <li class="skills__item"> C++ </li>
-                                    <li class="skills__item"> SQL </li>
-                                    <li class="skills__item"> R </li>
-                                    <li class="skills__item"> JavaScript </li>
-                                    <li class="skills__item"> HTML </li>
-                                    <li class="skills__item"> CSS </li>
-                                </ul>
-                            </div>
-                            <div class="skills__content">
-                                <div class="skills__icon">
-                                    <div class="skills__icon__shell2">
-                                        <i class="fa-solid fa-layer-group" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                                <div class="skills__title">
-                                    Data Science
-                                </div>
-                                <div class="skills__description">
-                                    I love leveraging machine learning tools and packages to build intricate learning models from start to finish.
-                                </div>
-                                <h4 class="skills__subtitle">Machine Learning:</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item">TensorFlow</li>
-                                    <li class="skills__item">PyTorch</li>
-                                    <li class="skills__item">Keras</li>
-                                    <li class="skills__item">Scikit-Learn</li>
-                                    <li class="skills__item">Matplotlib</li>
-                                    <li class="skills__item">Pandas</li>
-                                    <li class="skills__item">NumPy</li>
-                                </ul>
-                            </div>
-                            <div class="skills__content">
-                                <div class="skills__icon">
-                                    <div class="skills__icon__shell3">
-                                        <i class="fa-solid fa-gear" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                                <div class="skills__title">
-                                    Development Tools
-                                </div>
-                                <div class="skills__description">
-                                    I take pride in swiftly adapting to new, fast-growing technologies and tools quickly and reliably.
-                                </div>
-                                <h4 class="skills__subtitle">Technologies:</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item">Tableau</li>
-                                    <li class="skills__item">Power BI</li>
-                                    <li class="skills__item">Excel</li>
-                                    <li class="skills__item">AWS</li>
-                                    <li class="skills__item">React</li>
-                                    <li class="skills__item">Flask</li>
-                                    <li class="skills__item">Django</li>
-                                    <li class="skills__item">Git</li>
-                                    <li class="skills__item">Jupyter</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>              
-                </div>
+      <section id="experience">
+        <h2>Experience</h2>
+      
+        <!-- TO ADD
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/meta.png" alt="meta Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">Jul 2025 – Present</div>
+              <div class="entry-title">Data Scientist @ Meta</div>
             </div>
-        </section>
-
-
-    <!--=============================================================================================================================================-->
-
-
-    <!--=============================================================================================================================================-->
-
-        <!--=================== Experience ====================-->
-        <section id="experience" class="section qualification">
-            <div class="qualification__container">
-                <!--=================== Experience Header ====================-->
-                <div class="section__header">
-                    <h2 class="section__title">Experience</h2>
-                    <span class="section__subtitle">My professional history!</span>
-                </div>
-                <div class="experience__wrapper">
-                    <div class="experience__qualification__section">
-                        <!--============== Experience Introduction ============-->
-                        <div class="qualication__header">
-                            <h3 class="qualification__name">
-                                I love uncovering innovative solutions and solving complex problems.
-                            </h3>
-                        </div>
-                        <section class="timeline">
-                            <div class="timeline-left-side">
-                                <!--============== Experience (DNNG) ============-->
-                                <div class="timeline-item"> 
-                                    <div class="timeline-item-inner-left">
-                                        <div class="testing">
-                                            <div class="timeline-title">
-                                                University of Michigan - Detection for Nuclear Nonproliferation Group
-                                            </div>
-                                            <div class="timeline-role"> 
-                                                Student Researcher
-                                            </div>
-                                            <div class="timeline-duration">
-                                                <i class="fa-solid fa-calendar-days" style="color: white; font-size: 2rem;"></i>
-                                                <div class="timeline-duration-item"> 
-                                                    May 2023 - May 2024
-                                                </div>
-                                            </div>
-                                            <div class="timeline-description"> 
-                                                Developed Python script for various nuclear energy detection algorithms
-                                                to streamline laboratory usage, focusing on modularity and user interpretability.
-                                            </div>
-                                            <a href="dnng.html" class="timeline-link">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-line"> 
-                                    <div class="timeline-icon">
-                                        <div class="timeline-icon-shell1">
-                                            <i class="fa-solid fa-radiation" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-right-side">
-                                <div class="timeline-line"> 
-                                    <div class="timeline-icon">
-                                        <div class="timeline-icon-shell2">
-                                            <i class="fa-solid fa-bolt" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--============== Experience (ASSET Lab) ============-->
-                                <div class="timeline-item"> 
-                                    <div class="timeline-item-inner-right">
-                                        <div class="testing">
-                                            <div class="timeline-title">
-                                                Data Glacier (IT Services & IT Consulting)
-                                            </div>
-                                            <div class="timeline-role"> 
-                                                Data Science Intern 
-                                            </div>
-                                            <div class="timeline-duration">
-                                                <i class="fa-solid fa-calendar-days" style="color: white; font-size: 2rem;"></i>
-                                                <div class="timeline-duration-item"> 
-                                                    Mar 2023 - May 2023
-                                                </div>
-                                            </div>
-                                            <div class="timeline-description">
-                                                Conducted exploratory data analysis, tested multiple ML models, and facilitated model deployment 
-                                                to drive targeted marketing and resource allocation for banking campaigns.
-                                            </div>
-                                            <a href="data_glacier.html" class="timeline-link">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>     
-                            <div class="timeline-left-side">
-                                <!--============== Experience (Data Glacier)============-->
-                                <div class="timeline-item"> 
-                                    <div class="timeline-item-inner-left">
-                                        <div class="testing">
-                                            <div class="timeline-title">
-                                                Low-Impact Energy Technologies Lab
-                                            </div>
-                                            <div class="timeline-role"> 
-                                                Data Analyst Research Assistant
-                                            </div>
-                                            <div class="timeline-duration">
-                                                <i class="fa-solid fa-calendar-days" style="color: white; font-size: 2rem;"></i>
-                                                <div class="timeline-duration-item"> 
-                                                    May 2023 - Aug 2023
-                                                </div>
-                                            </div>
-                                            <div class="timeline-description"> 
-                                                Automating data collection and conducting data analysis to support ongoing 
-                                                research protecting energy systems against climate change.
-                                            </div>
-                                            <a href="asset.html" class="timeline-link">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-line"> 
-                                    <div class="timeline-icon">
-                                        <div class="timeline-icon-shell3">
-                                            <i class="fa-solid fa-cloud-arrow-up" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-right-side">
-                                <div class="timeline-line"> 
-                                    <div class="timeline-icon">
-                                        <div class="timeline-icon-shell4">
-                                            <i class="fa-solid fa-database" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--============== Experience (Ipsos)============-->
-                                <div class="timeline-item"> 
-                                    <div class="timeline-item-inner-right">
-                                        <div class="testing">
-                                            <div class="timeline-title">
-                                                Ipsos (Multinational Market Research & Consulting Firm)
-                                            </div>
-                                            <div class="timeline-role"> 
-                                                Data Science Intern 
-                                            </div>
-                                            <div class="timeline-duration">
-                                                <i class="fa-solid fa-calendar-days" style="color: white; font-size: 2rem;"></i>
-                                                <div class="timeline-duration-item"> 
-                                                    Jun 2022 - Aug 2022
-                                                </div>
-                                            </div>
-                                            <div class="timeline-description">
-                                                Excelled in diverse Python tasks, including image processing, data synchronization, web scraping, 
-                                                CRUD operations, and AWS integration for enhanced productivity.
-                                            </div>
-                                            <a href="ipsos.html" class="timeline-link">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!--=============================================================================================================================================-->
-
-
-        <!--=================== Projects ====================-->
-        <section id="project" class="section project">
-            <div class="project__container">
-                <!--=================== Projects Header ====================-->
-                <div class="section__header">
-                    <h2 class="section__title">Portfolio</h2>
-                    <span class="section__subtitle">Check out my work!</span>
-                </div>
-                <div class="d-grid project__wrapper">
-                    <!--=================== Projects Introduction ====================-->
-                    <div class="project__header_content">
-                        <div class="project__header__title">
-                            Hands-On Learning Experiences
-                        </div>
-                        <div class="project__header__description">
-                            I have completed 25+ projects both academically and personally. I love seeing my projects come to life step-by-step and below are some of the work 
-                            that I am most proud of.
-                        </div>
-                    </div>
-                    <div class="projects">
-                        <div class="projects__main">
-                            <!--============== Project (Reddit NLP) =============-->
-                            <div class="project__content">
-                                <div class="project-line"> 
-                                    <div class="project-line-inner">
-                                        <div class="project-icon">
-                                            <div class="project-icon-shell1">
-                                                <i class="fa-solid fa-language" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project__content__inner">
-                                    <img src="img/reddit.webp" alt="Agency Website" class="project__img">
-                                    <div class="project__bio">
-                                        <h3 class="project__title">Reddit Forum Classifier</h3>
-                                        <p class="project__description"> Natural language processing model that classifies reddit text speech into happy, sad, 
-                                            and neutral moods.</p>
-                                        <a href="reddit_project.html" class="project__link">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--============== Project (Galaxy CV) =============-->
-                            <div class="project__content">
-                                <div class="project-line"> 
-                                    <div class="project-line-inner">
-                                        <div class="project-icon">
-                                            <div class="project-icon-shell2">
-                                                <i class="fa-solid fa-shuttle-space" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project__content__inner">
-                                    <img src="img/space.jpg" alt="Crypto Application " class="project__img">
-                                    <div class="project__bio">
-                                        <h3 class="project__title">Galaxy Classifier</h3>
-                                        <p class="project__description">Computer vision leveraging deep learning CNN to classify images of galaxies into 37 distinct classes.</p>
-                                        <a href="galaxy.html" class="project__link">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--============== Project (Dog Classifier CV) =============-->
-                            <div class="project__content">
-                                <div class="project-line"> 
-                                    <div class="project-line-inner">
-                                        <div class="project-icon">
-                                            <div class="project-icon-shell3">
-                                                <i class="fa-solid fa-dog" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project__content__inner">
-                                    <img src="img/dog.png" alt="Ecommerce Website" class="project__img">
-                                    <div class="project__bio">
-                                        <h3 class="project__title">Dog Breed Classifier</h3>
-                                        <p class="project__description">Convolutional neural network that accurately categorizes images into 10 distinct dog breed classes.</p>
-                                        <a href="dog_project.html" class="project__link">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============== Project (G2M Cab Investment Analysis) ============= -->
-                            <div class="project__content">
-                                <div class="project-line"> 
-                                    <div class="project-line-inner">
-                                        <div class="project-icon">
-                                            <div class="project-icon-shell4">
-                                                <i class="fa-solid fa-magnifying-glass-chart" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="project__content__inner-end">
-                                    <img src="img/graph.jpg" alt="Crypto Application " class="project__img">
-                                    <div class="project__bio">
-                                        <h3 class="project__title">G2M Cab Investment Analysis</h3>
-                                        <p class="project__description">Performing data analysis to optimize investment choice by analyzing taxi company databases.</p>
-                                        <a href="bank_project.html" class="project__link">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!--=============================================================================================================================================-->
-        <section id="blog">
-            <div class="section__header">
-                <h2 class="section__title">Blogs</h2>
-                <span class="section__subtitle">Check out my stories!</span>
-            </div>
-            <div class="blog__container">
-                <div class="blog__wrapper">
-                    <div class="blog__header">
-                        <div class="blog__title">
-                            Crafting Stories with Vision
-                        </div>
-                        <div class="blog__description">
-                            In my posts, I explore diverse topics from data science and college life to productivity and more. 
-                            My goal is to offer valuable insights and help readers learn something new.
-                        </div>
-                    </div>
-                    <div class="blog__container">
-                        <div class="posts_container">
-                            <div class="posts_grid">
-                                <div class="posts">
-                                    <div class="posts_title">
-                                        Why I Chose Data Science
-                                    </div>
-                                    <div class="posts_date">
-                                        June 24th, 2023
-                                    </div>
-                                    <img src="img/blog1.jpeg" class="posts__img">
-                                    <div class="blog__link__shell">
-                                        <a href="https://medium.com/@vweng/decoding-my-college-journey-why-i-chose-data-science-3c17616b33b4"  target="_blank" class="blog__link">View Blog</a>
-                                    </div>
-                                </div>
-                                <div class="posts">
-                                    <div class="posts_title">
-                                        Setting Goals are Overrated
-                                    </div>
-                                    <div class="posts_date">
-                                        July 14th, 2023
-                                    </div>
-                                    <img src="img/blog3.png" class="posts__img">
-                                    <div class="blog__link__shell">
-                                        <a href="https://medium.com/@vweng/why-settings-goals-are-overrated-57d1f2c11b0f" target="_blank" class="blog__link">View Blog</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="entry-description">
+            Incoming data scientist on the signal growth data science team.
+          </div>
+        </div>    
+        -->   
         
-        <!--=============================================================================================================================================-->
-
-        <!--=================== Contact ====================-->
-        <section id="contact" class="section contact">
-            <div class="contact__container">
-                <!--=================== Contact Header ====================-->
-                <div class="section__header">
-                    <h2 class="section__title">Contact</h2>
-                    <span class="section__subtitle">Connect with me!</span>
-                </div>
-                <div class="contact__wrapper">
-                    <!--=================== Contact Introduction ====================-->
-                    <div class="contact-header">
-                        <div class="contact-header-title">
-                            Let's chat. Send me a message.
-                        </div>
-                        <div class="contact-header-description">
-                            I am passionate about building innovative solutions and collaborating with other developers to bring these ideas to life.
-                            Don't hesitate to reach out to me and let's build something amazing!
-                        </div>
-                    </div>
-                    <div class="contact-box">
-                        <div class="contact-section">
-                            <div class="contact-description">
-                                <div class="contact-links">
-                                    <!--=================== Contact Information ====================-->
-                                    <div class="contact-socials">
-                                        <div class="contact-line"> 
-                                            <div class="contact-icon">
-                                                <div class="contact-icon-shell2">
-                                                    <i class="fa-solid fa-envelope" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="socials">
-                                            <div class="socials-title">
-                                                Email
-                                            </div>
-                                            <div class="socials-info">
-                                                vincentweng011@gmail.com
-                                            </div>
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                    <div class="contact-socials">
-                                        <div class="contact-line"> 
-                                            <div class="contact-icon">
-                                                <div class="contact-icon-shell4">
-                                                    <i class="fa-solid fa-link" style="color: rgb(20, 28, 58); font-size: 3rem;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="socials">
-                                            <div class="socials-title">
-                                                Links
-                                            </div>
-                                            <div class="socials-info">
-                                                <div class="linkedin_github">
-                                                    <div class="footer__social-item">
-                                                        <a href="https://www.linkedin.com/in/vincent-weng-181788210/" target="_blank" class="contact-social-link">
-                                                            <i class="ri-linkedin-fill"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="footer__social-item">
-                                                        <a href="https://github.com/VAweng02" target="_blank" class="contact-social-link">
-                                                            <i class="ri-github-fill"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="footer__social-item">
-                                                        <a href="https://medium.com/@vweng" target="_blank" class="contact-social-link">
-                                                            <i class="ri-medium-fill"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--
-                        <div class="blog-wrapper">
-                            <div class="blog-container">
-                                <div class="blog-top-row">
-                                    <div class="blog-post">
-                                        <img src="img/blog1.jpeg" alt="Crypto Application" class="blog-img">
-                                        <div class="blog-top-title">
-                                            Decoding My College Journey:
-                                        </div>
-                                        <div class="blog-bottom-title">
-                                            Why I Chose Data Science
-                                        </div>
-                                    </div>
-                                    <div class="blog-post">
-                                        <img src="img/blog2.jpeg" alt="Crypto Application" class="blog-img">
-                                        <div class="blog-top-title">
-                                            Decoding My College Journey:
-                                        </div>
-                                        <div class="blog-bottom-title">
-                                            Freshmen Year
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-bottom-row">
-                                    <div class="blog-post">
-                                        <img src="img/blog3.jpeg" alt="Crypto Application" class="blog-img">
-                                        <div class="blog-top-title">
-                                            Decoding My College Journey:
-                                        </div>
-                                        <div class="blog-bottom-title">
-                                            Sophomore Year
-                                        </div>
-                                    </div>
-                                    <div class="blog-post">
-                                        <img src="img/graph.jpg" alt="Crypto Application" class="blog-img">
-                                        <div class="blog-top-title">
-                                            Decoding My College Journey:
-                                        </div>
-                                        <div class="blog-bottom-title">
-                                            Junior Year
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-
-                        <!--=================== Contact Form ====================
-                        <div class="contact-section">
-                            <div class="contact-form">
-                                <div class = "first-line">
-                                    <div class="form-field">
-                                        <label class=section-title for="full-name">Name</label>
-                                        <input type="text" placeholder="Full Name" id="full-name" name="full-name" required>
-                                    </div>
-                                    <div class="form-field">
-                                        <label class=section-title for="email">Email</label>
-                                        <input type="email" placeholder="Your Email" id="email" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="form-field">
-                                    <label class=section-title for="subject">Subject</label>
-                                    <input type="text" placeholder="Subject" id="subject" name="subject" required>
-                                </div>
-                                <div class="form-field">
-                                    <label class=section-title for="subject">Description</label>
-                                    <textarea id="description" placeholder="Message" name="description" rows="5" required></textarea>
-                                </div>
-                                <button type="submit" class="contact-submit-button">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-                    </div>
-                </div>
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/jpmc.png" alt="jpmc Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">Jun 2024 – Aug 2024</div>
+              <div class="entry-title">Data Science Summer Analyst @ JPMorgan Chase & Co.</div>
             </div>
-        </section>
-
-
-        <!--=============================================================================================================================================-->
-
-
-        <div class="transition_end">
-            <div class="transition__sub">
-                <img src="/img/computer.png" alt="Shawn" class="transition__img">
-            </div>
+          </div>
+          <div class="entry-description">
+            Enhanced Chase's credit card acquisition strategy by uncovering temporal trends across 36 months of application data, 
+            helping optimize the timing and structure of incentive offers. Leveraged advanced analytics — including machine learning, custom metrics, and intervention analysis — 
+            to access customer responses and evaluated the competitive landscape.
+          </div>
         </div>
 
-
-    <!--=================== Footer ====================-->
-    <footer id="footer" class="footer">
-        <div class="footer-content">
-            <!--=================== Footer Header ====================-->
-            <div class="footer-logo-shell">
-                <div class="footer-logo-item">
-                    <img src="/img/VV.png" style="border-radius: 12.5%;" alt="Shawn">
-                </div>
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/data_glacier.png" alt="data glacier Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">Mar 2023 – May 2023</div>
+              <div class="entry-title">Data Science Intern @ Data Glacier</div>
             </div>
-            <div class="footer-message">
-                Continuously learning and growing, <br> one step at a time.
-            </div>
-            <!--=================== Footer Links ====================-->
-            <div class="footer-links">
-                <div class="footer-links-item">
-                    <a href="#about" class="footer-link-about">
-                        <i class="fa-solid fa-user test" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    About
-                </div>
-                <!--
-                <div class="footer-links-item">
-                    <a href="#education" class="footer-link-education">
-                        <i class="fa-solid fa-school" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Education
-                </div>
-                -->
-                <div class="footer-links-item">
-                    <a href="#experience" class="footer-link-experience">
-                        <i class="fa-solid fa-briefcase" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Experience
-                </div>
-                <div class="footer-links-item">
-                    <a href="#project" class="footer-link-portfolio">
-                        <i class="fa-solid fa-laptop" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Portfolio
-                </div>
-                <div class="footer-links-item">
-                    <a href="#blog" class="footer-link-blog">
-                        <i class="fa-solid fa-pencil" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Blog
-                </div>
-                <div class="footer-links-item">
-                    <a href="#contact" class="footer-link-contact">
-                        <i class="fa-solid fa-message" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Contact
-                </div>
-                <!--
-                <div class="footer-links-item">
-                    <a href="https://drive.google.com/file/d/1-cviBIuXOlOEPLAmqINhzre-VSFSoytQ/view?usp=sharing" class="footer-link-resume" target="_blank">
-                        <i class="fa-solid fa-file" style="color: white; font-size: 2rem;"></i>
-                    </a>
-                    Resume
-                </div>
-                -->
-            </div>
-            <!--
-            <div class="react-logo-shell">
-                Built with React
-                <div class="react-logo">
-                    <img src="/img/react.png" style="border-radius: 15%;" alt="Shawn">
-                </div>
-            </div>
-            -->
-            <p class="footer-copyright">&copy; 2023 Vincent Weng. All Rights Reserved.</p>
+          </div>
+          <div class="entry-description">
+            Conducted exploratory data analysis, tested multiple machine learning models, and facilitated model deployment to drive targeted 
+            marketing and resource allocation for banking campaigns.
+          </div>
         </div>
-    </footer>
+
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/ipsos.png" alt="ipsos Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">Jun 2022 – Aug 2022</div>
+              <div class="entry-title">Software Engineering Intern @ Ipsos</div>
+            </div>
+          </div>
+          <div class="entry-description">
+            Delivered Python solutions across image processing, web scraping, CRUD operations, and AWS integration, 
+            boosting efficiency and productivity.
+          </div>
+        </div>
+
+      </section>
+      
+      <section id="education">
+        <h2>Education</h2>
+
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/rackham.png" alt="Meta Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">2024 - 2025</div>
+              <div class="entry-title">M.S. Data Science | University of Michigan</div>
+            </div>
+          </div>
+          <div class="entry-description">
+            Focused on probability and distribution theory, statistical inference, machine learning, and computational methods, 
+            gaining hands-on experience applying these techniques to real-world data science problems.
+          </div>
+
+
+          <div class="capstone-section">
+            <details>
+              <summary>
+                <span class="chevron">&gt;</span> Capstone Case Studies
+              </summary>
+              <ul class="capstone-links">
+                <li><a href="pdfs/case_study1.pdf" target="_blank">Case Study 1: Survival Analysis</a></li>
+                <li><a href="pdfs/case_study2.pdf" target="_blank">Case Study 2: Tail Characterization</a></li>
+                <li><a href="pdfs/case_study3.pdf" target="_blank">Case Study 3: Large-Scale Inference</a></li>
+                <li><a href="pdfs/case_study4.pdf" target="_blank">Case Study 4: Quantization Method</a></li>
+                <li><a href="pdfs/case_study5.pdf" target="_blank">Case Study 5: Generalized Estimating Equations</a></li>
+                <li><a href="pdfs/case_study6.pdf" target="_blank">Case Study 6: Multilevel Regression</a></li>
+                <li><a href="pdfs/case_study7.pdf" target="_blank">Case Study 7: Autocorrelation & Long-Range Memory</a></li>
+              </ul>
+            </details>
+          </div>
+
+          
+
+        </div>
+        
+        <div class="experience-entry">
+          <div class="top-row">
+            <img src="img/umich.png" alt="Meta Logo" class="company-logo">
+            <div class="experience-header">
+              <div class="entry-date">2020 - 2024</div>
+              <div class="entry-title">B.S. Data Science, B.S. Economics | University of Michigan</div>
+            </div>
+          </div>
+          <div class="entry-description">
+            Built a strong foundation in data structures and algorithms, machine learning, database systems, applied regression, 
+            and advanced mathematics. Gained analytical expertise through the study of economic theory, econometrics, 
+            and game theory.
+          </div>
+        </div> 
+      </section>   
+      
+      <section id="blogs">
+        <h2>Blogs</h2>
+      
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <img src="img/blog2.png" alt="blog2" class="project-image">
+            <h3 class="project-title">Why Setting Goals are Overrated</h3>
+            <p class="project-description">
+              July 14th, 2023
+            </p>
+            <a href="https://medium.com/@vweng/why-settings-goals-are-overrated-57d1f2c11b0f" target="_blank" class="read-more">View post →</a>
+          </div>
+          
+          <div class="project-card">
+            <img src="img/blog1.png" alt="blog1" class="project-image">
+            <h3 class="project-title">Why I Chose Data Science</h3>
+            <p class="project-description">
+              June 24th, 2023
+            </p>
+            <a href="https://medium.com/@vweng/decoding-my-college-journey-why-i-chose-data-science-3c17616b33b4" target="_blank" class="read-more">View post →</a>
+          </div>
+
+        </div>
+      </section>
     </main>
-    <!--=================== SwiperJS  ====================-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <!--=================== ScrollReveal ==================-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--=================== Main JS ====================-->
-    <script src="main.js"></script>
+  </div>
 </body>
-
 </html>
