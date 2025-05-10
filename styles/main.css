@@ -1,4 +1,3 @@
-/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +58,6 @@
     text-decoration: underline;
   }
   
-  /* Main content styling */
   .content {
     margin-left: 400px;
     width: calc(100% - 400px);
@@ -92,40 +90,37 @@
   }
   
   .content h2 {
-    font-size: 0.85rem;          /* smaller size (≈13–14px) */
-    font-weight: 500;            /* medium (or 400 regular if you want lighter) */
-    text-transform: uppercase;   /* makes the text all uppercase */
-    letter-spacing: 1px;         /* adds subtle spacing between letters */
-    color: #666;                 /* soft gray tone */
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
     margin-bottom: 15px;
   }   
 
   .entry {
-    margin-bottom: 30px;   /* or 40px if you want more space */
+    margin-bottom: 30px;
   }
 
-  /* Date line */
   .entry-date {
-    font-size: 0.85rem;       /* ~13–14px */
-    font-weight: 400;         /* light or regular */
-    color: #777;              /* soft gray */
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #777;
     margin-bottom: 5px;
   }
 
-  /* Title line (job or degree) */
   .entry-title {
-    font-size: 1rem;          /* ~16px */
-    font-weight: 600;         /* semi-bold */
-    color: #111;              /* dark gray or near black */
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
     margin-bottom: 8px;
   }
 
-  /* Description paragraph */
   .entry-description {
-    font-size: 0.95rem;       /* ~15px */
-    font-weight: 400;         /* regular */
-    color: #444;              /* medium gray */
-    line-height: 1.6;         /* improve readability */
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
     margin-bottom: 10px;
   }
 
@@ -135,18 +130,18 @@
   
   .tag {
     display: inline-block;
-    background-color: #e7f0fe;   /* light blue background */
-    color: #2b6ef0;                /* dark text */
-    font-size: 0.75rem;            /* ≈12px */
+    background-color: #e7f0fe;
+    color: #2b6ef0;
+    font-size: 0.75rem;
     font-weight: 500;
-    padding: 6px 12px;             /* inner space */
-    margin: 4px 4px 0 0;           /* space between tags */
-    border-radius: 999px;          /* full pill shape */
+    padding: 6px 12px;
+    margin: 4px 4px 0 0;
+    border-radius: 999px;
     transition: background-color 0.2s;
   }
   
   .tag:hover {
-    background-color: #d0e2fd;    /* slightly darker on hover */
+    background-color: #d0e2fd;
   }
   
   .projects-grid {
@@ -232,7 +227,7 @@
   }
   
   .social-links a {
-    font-size: 1.5rem;  /* icon size */
+    font-size: 1.5rem;
     color: #333;
     transition: color 0.2s;
   }
