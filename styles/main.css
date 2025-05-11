@@ -301,6 +301,13 @@
     line-height: 1.5;
   }
 
+  .research-description {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+  }
+
   .capstone-section summary {
     font-size: 0.95rem;
     font-weight: 500;
