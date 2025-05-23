@@ -343,16 +343,6 @@ details[open] .chevron {
   text-decoration: underline;
 }
 
-@media (max-width: 800px) {
-  .entry-description,
-  .skill-tags,
-  .skills,
-  .capstone-section,
-  .project-description {
-    display: none;
-  }
-}
-
 @media (max-width: 1000px) {
   .container {
     width: 100%;
