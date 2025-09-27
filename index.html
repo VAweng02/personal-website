@@ -1,326 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vincent Weng</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Data Scientist. Writing on AI, growth, and knowledge systems. Resources and templates." />
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <img src="img/profile.jpeg" alt="Your photo" class="profile-pic">
-      <h1>Vincent Weng</h1>
 
-      <p class="role">Data Scientist @ Meta</p>
-      <p class="location">Based in Menlo Park, CA</p>
+<header>
+  <div class="container nav-container">
+    <a class="brand" href="/" aria-label="Home">Vincent Weng</a>
 
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
-        <a href="mailto:vincentweng011@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-  
-      <section class="about">
-        <h2>About</h2>
-        <p>
-          Recent M.S. Data Science graduate from the University of Michigan with a passion in MLOps, 
-          AI automation, and quantitative modeling. 
-        </p>
-      </section> 
-    
-      <section class="skills">
-        <h2>Skills</h2>
-        <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">R</span>
-          <span class="tag">SQL</span>
-          <span class="tag">C++</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">TensorFlow</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">Scikit-Learn</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">SnowFlake</span>
-        </div>
-      </section>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <nav>
-        <ul>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-        </ul>
-      </nav>
-    </aside>
-    
+    <ul id="site-nav" class="nav__list" role="menubar">
+      <li role="none"><a role="menuitem" href="about.html">About</a></li>
+      <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+      <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+      <li role="none"><a role="menuitem" href="index.html#contact" class="nav__cta">Contact</a></li>
+    </ul>
 
-    <main class="content">
-      <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="img/llm.png" alt="LLM project image" class="project-image">
-            <h3 class="project-title">Detecting LLM Hallucinations</h3>
-            <div class="skill-tags">
-              <span class="tag">Python</span>
-              <span class="tag">API</span>
-            </div>
-            <p class="project-description">
-              Investigated why LLMs hallucinate using a graph-based evaluation framework with controlled prompts to 
-              observe inferences.
-            </p>
-            <a href="https://github.com/lxguan1/KG_Hallucination_Categorization" target="_blank" class="read-more">Read more →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/bank.png" alt="bank project image" class="project-image">
-            <h3 class="project-title">Bank Term Deposit Prediction</h3>
-            <div class="skill-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-            </div>
-            <p class="project-description">
-              Using machine learning to predict whether a client will subscribe to a bank term deposit.
-            </p>
-            <a href="https://github.com/VAweng02/bank-term-deposit-prediction" target="_blank" class="read-more">Read more →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/galaxy.png" alt="galaxy project image" class="project-image">
-            <h3 class="project-title">Galaxy Classifier</h3>
-            <div class="skill-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">TensorFlow</span>
-            </div>
-            <p class="project-description">
-              A deep learning computer vision project designed to classify galaxy images using convolutional neural networks.
-            </p>
-            <a href="https://github.com/VAweng02/eecs442-final-project" target="_blank" class="read-more">Read more →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/nlp.png" alt="blue project image" class="project-image">
-            <h3 class="project-title">Text Classification on GLUE</h3>
-            <div class="skill-tags">
-              <span class="tag">Python</span>
-            </div>
-            <p class="project-description">
-              Explored text classification on the GLUE benchmark using custom preprocessing techniques.
-            </p>
-            <a href="https://github.com/VAweng02/stats507-finalproject" target="_blank" class="read-more">Read more →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/nba.png" alt="nba project image" class="project-image">
-            <h3 class="project-title">NBA Home Attendance</h3>
-            <div class="skill-tags">
-              <span class="tag">R</span>
-            </div>
-            <p class="project-description">
-              Analyzed how NBA home attendance relates to team performance over the past decade.
-            </p>
-            <a href="https://github.com/VAweng02/stats506-finalproject" target="_blank" class="read-more">Read more →</a>
-          </div>
-        </div>
-
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/meta.png" alt="meta Logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">Jul 2025 – Present</div>
-              <div class="entry-title">Data Scientist @ Meta</div>
-            </div>
-          </div>
-          <div class="entry-description">
-
-          </div>
-        </div>
-        
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/jpmc.png" alt="jpmc Logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">Jun 2024 – Aug 2024</div>
-              <div class="entry-title">Data Science Summer Analyst @ JPMorgan Chase & Co.</div>
-            </div>
-          </div>
-          <div class="entry-description">
-            Enhanced Chase's credit card acquisition strategy by uncovering temporal trends across 36 months of application data, 
-            helping optimize the timing and structure of incentive offers. Leveraged advanced analytics — including machine learning, custom metrics, and intervention analysis — 
-            to access customer responses and evaluated the competitive landscape.
-          </div>
-        </div>
-
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/data_glacier.png" alt="data glacier Logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">Mar 2023 – May 2023</div>
-              <div class="entry-title">Data Science Intern @ Data Glacier</div>
-            </div>
-          </div>
-          <div class="entry-description">
-            Conducted exploratory data analysis, tested multiple machine learning models, and facilitated model deployment to drive targeted 
-            marketing and resource allocation for banking campaigns.
-          </div>
-        </div>
-
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/ipsos.png" alt="ipsos Logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">Jun 2022 – Aug 2022</div>
-              <div class="entry-title">Software Engineering Intern @ Ipsos</div>
-            </div>
-          </div>
-          <div class="entry-description">
-            Delivered Python solutions across image processing, web scraping, CRUD operations, and AWS integration, 
-            boosting efficiency and productivity.
-          </div>
-        </div>
-
-      </section>
-      
-      <section id="education">
-        <h2>Education</h2>
-
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/rackham.png" alt="rackham Logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">2024 - 2025</div>
-              <div class="entry-title">M.S. Data Science | University of Michigan</div>
-            </div>
-          </div>
-          <div class="entry-description">
-            Developed expertise in probability and distribution theory, statistical inference, machine learning, and 
-            computational methods, complemented by hands-on experience applying these techniques to real-world data 
-            science problems.
-          </div>
-
-          <div class="capstone-section">
-            <details>
-              <summary>
-                <span class="chevron">&gt;</span> Capstone Case Studies
-              </summary>
-              <ul class="capstone-links">
-                <li><a href="pdfs/case_study1.pdf" target="_blank">Case Study 1: Survival Analysis</a></li>
-                <li><a href="pdfs/case_study2.pdf" target="_blank">Case Study 2: Tail Characterization</a></li>
-                <li><a href="pdfs/case_study3.pdf" target="_blank">Case Study 3: Large-Scale Inference</a></li>
-                <li><a href="pdfs/case_study4.pdf" target="_blank">Case Study 4: Quantization Method</a></li>
-                <li><a href="pdfs/case_study5.pdf" target="_blank">Case Study 5: Generalized Estimating Equations</a></li>
-                <li><a href="pdfs/case_study6.pdf" target="_blank">Case Study 6: Multilevel Regression</a></li>
-                <li><a href="pdfs/case_study7.pdf" target="_blank">Case Study 7: Autocorrelation & Long-Range Memory</a></li>
-              </ul>
-            </details>
-          </div>
-        </div>
-        
-        <div class="experience-entry">
-          <div class="top-row">
-            <img src="img/umich.png" alt="umich logo" class="company-logo">
-            <div class="experience-header">
-              <div class="entry-date">2020 - 2024</div>
-              <div class="entry-title">B.S. Data Science, B.S. Economics | University of Michigan</div>
-            </div>
-          </div>
-          <div class="entry-description">
-            Build a strong foundation in data structures and algorithms, machine learning, database systems, applied regression, 
-            and advanced mathematics. Gained analytical expertise through the study of economic theory, econometrics, 
-            and game theory.
-          </div>
-
-          <div class="capstone-section">
-            <details>
-              <summary>
-                <span class="chevron">&gt;</span> Research Experience
-              </summary>
-                <ul class="capstone-links">
-                <li><a href="https://dnng.engin.umich.edu/" target="_blank">Detection for Nuclear Nonproliferation Group</a> 
-                  <div class="entry-description">
-                    Developed Python suite optimizing neutron noise detection algorithms.
-                  </div>
-                </li>
-                <li><a href="https://www.assetlab.org/" target="_blank">Low-Impact Energy Technologies Lab</a>
-                  <div class="entry-description">
-                    Built data pipelines to forecast power plant outages.
-                  </div>
-                </li>
-              </ul>
-            </details>
-          </div>
-
-        </div> 
-      </section>   
-      
-      <section id="blogs">
-        <h2>Blogs</h2>
-      
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <img src="img/blog5.avif" alt="blog4" class="project-image">
-            <h3 class="project-title">SQL Window Functions Explained: A Tricky Concept Made Simple</h3>
-            <p class="project-description">
-              June 22nd, 2025
-            </p>
-            <a href="https://medium.com/@vweng/sql-window-functions-explained-a-tricky-concept-made-simple-bb3675748801" target="_blank" class="read-more">View post →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/blog4.png" alt="blog4" class="project-image">
-            <h3 class="project-title">Rethinking Productivity: 3 Lessons I Wish I Knew Sooner</h3>
-            <p class="project-description">
-              June 10th, 2025
-            </p>
-            <a href="https://medium.com/@vweng/rethinking-productivity-3-lessons-i-wish-i-knew-sooner-7f9f9f39ab30" target="_blank" class="read-more">View post →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/blog3.png" alt="blog3" class="project-image">
-            <h3 class="project-title">4 Things I Overlooked in Data Science</h3>
-            <p class="project-description">
-              May 17th, 2025
-            </p>
-            <a href="https://medium.com/@vweng/4-things-i-overlooked-in-data-science-bf4273479220" target="_blank" class="read-more">View post →</a>
-          </div>
-
-          <div class="project-card">
-            <img src="img/blog2.png" alt="blog2" class="project-image">
-            <h3 class="project-title">Why Setting Goals are Overrated</h3>
-            <p class="project-description">
-              July 14th, 2023
-            </p>
-            <a href="https://medium.com/@vweng/why-settings-goals-are-overrated-57d1f2c11b0f" target="_blank" class="read-more">View post →</a>
-          </div>
-          
-          <div class="project-card">
-            <img src="img/blog1.png" alt="blog1" class="project-image">
-            <h3 class="project-title">Why I Chose Data Science</h3>
-            <p class="project-description">
-              June 24th, 2023
-            </p>
-            <a href="https://medium.com/@vweng/decoding-my-college-journey-why-i-chose-data-science-3c17616b33b4" target="_blank" class="read-more">View post →</a>
-          </div>
-
-        </div>
-      </section>
-    </main>
+    <nav class="nav-overlay">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
+      <ul role="menubar">
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+        <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+        <li role="none"><a role="menuitem" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
+
+  <main>
+    <section class="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+
+        <div class="hero__photo">
+          <img src="img/profile_pic.png" alt="Vincent Weng profile picture">
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Hi, I’m Vincent — a Data Scientist.</h1>
+          <p class="hero__lede">
+            This is where I share my journey in data science—ideas, tools, and templates designed to help others learn, build, and grow. 
+            My goal is to make data science more accessible and actionable.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" aria-label="Resources">
+      <div class="container">
+        <h2 class="resources__title">What I Share</h2>
+        <div class="resources__grid">
+          <div class="resource_article">
+            <div class="resource__icon"><i class="far fa-edit"></i></div>
+            <h3 class="resource__title">Articles</h3>
+            <p class="resource__desc">
+              I write about tech, personal finance, growth, and strategies for recruiting and professional development.
+            </p>
+            <a href="articles.html" class="read-more">Read more →</a>
+        </div>
+
+        <div class="resource_article">
+          <div class="resource__icon"><i class="far fa-lightbulb"></i></div>
+          <h3 class="resource__title">Projects</h3>
+          <p class="resource__desc">
+            Hands-on initiatives and projects where I apply ideas, build tools, and explore different solutions.
+          </p>
+          <a href="projects.html" class="read-more">Read more →</a>
+        </div>
+
+        <div class="resource_article">
+          <div class="resource__icon"><i class="far fa-file-alt"></i></div>
+          <h3 class="resource__title">Templates</h3>
+          <p class="resource__desc">
+            Ready-to-use templates that maximize visibility and brings organization to different areas of life.
+          </p>
+          <a href="#" class="read-more">[Coming Soon]</a>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-label="About"></section>
+    <section id="articles" aria-label="Articles"></section>
+    <section id="resources" aria-label="Resources"></section>
+    <section id="templates" aria-label="Templates"></section>
+  </main>
+
+
+  <section id="contact">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <p class="contact-subtitle">
+        Let’s connect. Send me a message below!
+      </p>
+
+      <form action="https://formspree.io/f/xgvnvaql" method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+
+      <p class="direct-email">
+        Can also reach me at 
+        <a href="mailto:vincentweng011@gmail.com">vincentweng011@gmail.com</a>
+      </p>
+
+    </div>
+  </section>
+  
+</section>
+
+
+  <footer>
+    <div class="container footer__inner">
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/vincentweng0/" target="_blank" rel="me">LinkedIn</a></li>
+        <li><a href="https://github.com/VAweng02" target="_blank" rel="me">GitHub</a></li>
+        <li><a href="https://medium.com/@vweng" target="_blank">Medium</a></li>
+      </ul>
+      <p class="copyright">© <span data-year>2025</span> Vincent Weng</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+      hamburger.classList.add('hide');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+      hamburger.classList.remove('hide');
+    });
+  </script>
 </body>
 </html>

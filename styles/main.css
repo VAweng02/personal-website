@@ -1,40 +1,39 @@
+/* Base reset & typography */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   font-family: Poppins, sans-serif;
   font-size: 15px;
 }
 
+/* Layout */
 .container {
   display: flex;
-  height: auto;
   width: 100%;
-  overflow: visible;
-  flex-direction: row;
 }
 
 .sidebar {
-  width: 30%;
-  min-width: 200px;
-  max-width: 400px;
-  background-color: #f4f4f4;
-  padding: 30px;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  width: 30%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #f4f4f4;
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .sidebar h1 {
   font-size: 20px;
-  font-weight: 600;    
+  font-weight: 600;
 }
 
 .sidebar .profile-pic {
@@ -48,29 +47,23 @@ body, html {
   margin-top: 20px;
 }
 
-.sidebar nav ul li {
-  margin-bottom: 10px;
-}
+.sidebar nav ul li { margin-bottom: 10px; }
 
 .sidebar nav ul li a {
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
 }
 
-.sidebar nav ul li a:hover {
-  text-decoration: underline;
-}
+.sidebar nav ul li a:hover { text-decoration: underline; }
 
 .content {
   flex: 1;
   margin-left: 400px;
   width: calc(100% - 400px);
   padding: 40px;
-  overflow-y: scroll;
-  height: auto;
-  overflow: visible
 }
 
+/* Large screens */
 @media (min-width: 1500px) {
   .content {
     margin-left: 400px;
@@ -78,22 +71,23 @@ body, html {
   }
 }
 
-.content section {
-  margin-bottom: 100px;
-}
+/* Sections & headings */
+.content section { margin-bottom: 100px; }
 
-.content h2 {
+.content h2,
+.about h2,
+.skills h2 {
   font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #666;
   margin-bottom: 15px;
-}   
-
-.entry {
-  margin-bottom: 30px;
 }
+
+/* Entries */
+.entry,
+.experience-entry { margin-bottom: 30px; }
 
 .entry-date {
   font-size: 0.85rem;
@@ -109,69 +103,68 @@ body, html {
   margin-bottom: 8px;
 }
 
-.entry-description {
+.entry-description,
+.research-description {
   font-size: 0.95rem;
-  font-weight: 400;
   color: #444;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.skill-tags {
-  margin-top: 0px;
+/* Tags */
+.skill-tags { margin-top: 0; }
+
+.skills { margin: 20px 0; }
+
+.skills .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tag {
   display: inline-block;
-  background-color: #e7f0fe;
-  color: #2b6ef0;
-  font-size: 0.75rem;
-  font-weight: 500;
   padding: 6px 12px;
   margin: 4px 4px 0 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2b6ef0;
+  background-color: #e7f0fe;
   border-radius: 999px;
   transition: background-color 0.2s;
 }
 
-.tag:hover {
-  background-color: #d0e2fd;
-}
+.tag:hover { background-color: #d0e2fd; }
 
+/* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 @media (max-width: 1000px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 700px) {
-  .projects-grid {
-    grid-template-columns: 1fr; 
-  }
-}  
+  .projects-grid { grid-template-columns: 1fr; }
+}
 
 .project-card {
+  padding: 20px;
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
+.project-card:hover { transform: translateY(-5px); }
 
 .project-image {
   width: 100%;
   height: 150px;
-  border-radius: 12px;
   margin-bottom: 15px;
+  border-radius: 12px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -190,15 +183,14 @@ body, html {
 
 .read-more {
   font-size: 0.85rem;
+  font-weight: 500;
   color: #2b6ef0;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.read-more:hover {
-  text-decoration: underline;
-}
+.read-more:hover { text-decoration: underline; }
 
+/* Meta text */
 .role {
   font-size: 0.9rem;
   color: #555;
@@ -211,6 +203,7 @@ body, html {
   margin-bottom: 15px;
 }
 
+/* Social */
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -224,39 +217,16 @@ body, html {
   transition: color 0.2s;
 }
 
-.social-links a:hover {
-  color: #2b6ef0;
-}
+.social-links a:hover { color: #2b6ef0; }
 
-.skills {
-  margin-top: 20px; 
-  margin-bottom: 20px; 
-}
-
-.about h2,
-.skills h2 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #666;
-}
-
+/* About */
 .about p {
   font-size: 0.85rem;
   color: #444;
   margin-bottom: 20px;
 }
 
-.skills .skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.experience-entry {
-  margin-bottom: 30px;
-}
-
+/* Experience */
 .top-row {
   display: flex;
   align-items: flex-start;
@@ -266,62 +236,28 @@ body, html {
 .company-logo {
   width: 50px;
   height: 50px;
-  object-fit: contain;
   margin-right: 15px;
   background-color: #fff;
+  object-fit: contain;
 }
 
-.experience-header {
-  display: flex;
-  flex-direction: column;
-}
+.experience-header { display: flex; flex-direction: column; }
 
-.entry-date {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 4px;
-}
-
-.entry-title {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.entry-description {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-.research-description {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-}
-
+/* Capstone */
 .capstone-section summary {
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
   list-style: none;
 }
 
-.capstone-section summary::-webkit-details-marker {
-  display: none;
-}
+.capstone-section summary::-webkit-details-marker { display: none; }
 
-.chevron {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-details[open] .chevron {
-  transform: rotate(90deg);
-}
+.chevron { display: inline-block; transition: transform 0.2s ease; }
+details[open] .chevron { transform: rotate(90deg); }
 
 .capstone-links {
   list-style: none;
@@ -329,9 +265,7 @@ details[open] .chevron {
   margin-top: 8px;
 }
 
-.capstone-links li {
-  margin-bottom: 6px;
-}
+.capstone-links li { margin-bottom: 6px; }
 
 .capstone-links a {
   font-size: 0.9rem;
@@ -339,29 +273,22 @@ details[open] .chevron {
   text-decoration: none;
 }
 
-.capstone-links a:hover {
-  text-decoration: underline;
-}
+.capstone-links a:hover { text-decoration: underline; }
 
+/* Responsive (<= 1000px) */
 @media (max-width: 1000px) {
-  .container {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  .container { display: block; }
 
   .sidebar {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
-    position: static;
-    height: auto;
-    padding: 20px;
-    background-color: #f4f4f4;
   }
-
 
   .sidebar .profile-pic {
     width: 100px;
@@ -374,10 +301,7 @@ details[open] .chevron {
     margin-bottom: 5px;
   }
 
-  .role,
-  .location {
-    text-align: center;
-  }
+  .role, .location { text-align: center; }
 
   .social-links {
     justify-content: center;
@@ -392,22 +316,16 @@ details[open] .chevron {
     padding: 0;
   }
 
-  .sidebar nav ul li {
-    margin: 0;
-  }
+  .sidebar nav ul li { margin: 0; }
 
   .about {
     text-align: center;
     padding: 10px 0;
   }
 
-  .skills {
-    display: none;
-  }
+  .skills { display: none; }
 
-  .skill-tags {
-    justify-content: center;
-  }
+  .skill-tags { justify-content: center; }
 
   .content {
     margin-left: 0;

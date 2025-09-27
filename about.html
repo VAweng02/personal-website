@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Vincent Weng</title>
+  <meta name="description" content="About Vincent Weng — background, experience, skills, and interests." />
+  <link rel="stylesheet" href="styles/main1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a class="brand" href="/" aria-label="Home">Vincent Weng</a>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="site-nav" class="nav__list" role="menubar">
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+        <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+        <li role="none"><a role="menuitem" href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+
+      <nav class="nav-overlay">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <ul role="menubar">
+          <li role="none"><a role="menuitem" href="about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
+          <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+          <li role="none"><a role="menuitem" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+     <section class="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <!-- Profile photo -->
+        <div class="hero__photo_about">
+          <img src="img/scientist.png" alt="Vincent Weng profile picture">
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__title_about">About Me</h1>
+          <p class="hero__lede_about">
+            I earned my Master’s in Data Science from the University of Michigan and now work as a Data Scientist at Meta. 
+            I’m passionate about using data, product sense, and experimentation to solve business problems.
+          </p>
+          
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" aria-label="Experience">
+      <div class="container">
+        <h2 class="experience__title">Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <img src="img/meta.png" alt="Meta logo">
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 – Present</span>
+              <h3>Meta</h3>
+              <p>Data Scientist on Ads Signal Growth, focusing on product data science and experimentation.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <img src="img/jpmc.png" alt="JPMC logo">
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">Summer 2024</span>
+              <h3>JPMorgan Chase &amp; Co.</h3>
+              <p>Data Science Analyst on the Focused Analytics Solutions Team, focused on credit card competitor analysis.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <img src="img/umich.png" alt="UMich logo">
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 – 2024</span>
+              <h3>University of Michigan</h3>
+              <p>Developed neutron noise detection software and designed a pipeline for power plant outage forecasting.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  <footer>
+    <div class="container footer__inner">
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/vincentweng0/" target="_blank" rel="me">LinkedIn</a></li>
+        <li><a href="https://github.com/VAweng02" target="_blank" rel="me">GitHub</a></li>
+        <li><a href="https://medium.com/@vweng" target="_blank">Medium</a></li>
+      </ul>
+      <p class="copyright">© <span data-year>2025</span> Vincent Weng</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+      hamburger.classList.add('hide');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+      hamburger.classList.remove('hide');
+    });
+  </script>
+  
+</body>
+</html>
