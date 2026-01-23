@@ -40,7 +40,12 @@
 
   tocRoot.appendChild(ul);
 
-  // smooth scroll on click
+  const links = Array.from(tocRoot.querySelectorAll("a"));
+
+  // OPTIONAL: set initial active item once
+  if (links[0]) links[0].classList.add("active");
+
+  // smooth scroll + CLICK-ONLY active highlight
   tocRoot.addEventListener("click", (e) => {
     const a = e.target.closest("a");
     if (!a) return;
@@ -50,29 +55,12 @@
     if (!target) return;
 
     e.preventDefault();
+
+    // click-only highlight
+    links.forEach((l) => l.classList.remove("active"));
+    a.classList.add("active");
+
     target.scrollIntoView({ behavior: "smooth", block: "start" });
     history.replaceState(null, "", `#${id}`);
   });
-
-  // highlight active section while scrolling
-  const links = Array.from(tocRoot.querySelectorAll("a"));
-  const linkById = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      // find the first visible heading (closest to top)
-      const visible = entries
-        .filter((e) => e.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-
-      if (!visible) return;
-
-      links.forEach((l) => l.classList.remove("active"));
-      const active = linkById.get(visible.target.id);
-      if (active) active.classList.add("active");
-    },
-    { rootMargin: "0px 0px -70% 0px", threshold: [0.1, 1.0] }
-  );
-
-  headings.forEach((h) => observer.observe(h));
 })();
