@@ -1,0 +1,222 @@
+/* ===========================
+   Base / Reset
+=========================== */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Links */
+a { color: inherit; }
+a:hover { opacity: 0.85; }
+
+/* ===========================
+   Layout Container
+=========================== */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* ===========================
+   Header / Nav
+=========================== */
+.site-header {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* ===========================
+   Blog Page Layout
+=========================== */
+.blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 48px;
+  padding: 48px 0;
+}
+
+/* ===========================
+   Post Typography
+=========================== */
+.post {
+  min-width: 0;
+}
+
+.post-header {
+  margin-bottom: 32px;
+}
+
+.post-title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.post-meta {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Paragraphs */
+.post p {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  margin: 16px 0;
+}
+
+/* Headings */
+.post h2 {
+  font-size: 1.5rem;
+  margin-top: 42px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.post h3 {
+  font-size: 1.2rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+/* Lists */
+.post ul, .post ol {
+  padding-left: 18px;
+  line-height: 1.75;
+}
+
+.post li {
+  margin: 8px 0;
+}
+
+/* Inline code */
+.post code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+  background: rgba(0,0,0,0.06);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   Table of Contents
+=========================== */
+.toc {
+  align-self: start;
+  position: sticky;
+  top: 24px;
+}
+
+.toc-card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.toc-title {
+  font-weight: 650;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* TOC list */
+#toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#toc li {
+  margin: 10px 0;
+}
+
+#toc li.h3 {
+  padding-left: 14px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+#toc a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+#toc a:hover {
+  opacity: 1;
+}
+
+/* Active section highlight */
+#toc a.active {
+  opacity: 1;
+  font-weight: 650;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.site-footer {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.site-footer .container {
+  padding: 22px 0;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 0;
+  }
+
+  .toc {
+    position: relative;
+    top: 0;
+  }
+}
