@@ -6,38 +6,10 @@
   <title>Vincent Weng</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Data Scientist. Writing on AI, growth, and knowledge systems. Resources and templates." />
 </head>
+
 <body>
-
-<header>
-  <div class="container nav-container">
-    <a class="brand" href="/" aria-label="Home">Vincent Weng</a>
-
-    <button class="hamburger" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <ul id="site-nav" class="nav__list" role="menubar">
-      <li role="none"><a role="menuitem" href="about.html">About</a></li>
-      <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
-      <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
-      <li role="none"><a role="menuitem" href="index.html#contact" class="nav__cta">Contact</a></li>
-    </ul>
-
-    <nav class="nav-overlay">
-      <button class="close-btn" aria-label="Close menu">&times;</button>
-      <ul role="menubar">
-        <li role="none"><a role="menuitem" href="about.html">About</a></li>
-        <li role="none"><a role="menuitem" href="articles.html">Articles</a></li>
-        <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
-        <li role="none"><a role="menuitem" href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <div data-include="partials/header.html"></div>
 
   <main>
     <section class="hero" aria-label="Introduction">
@@ -50,21 +22,23 @@
         <div class="hero__content">
           <h1 class="hero__title">Hi, I’m Vincent — a Data Scientist.</h1>
           <p class="hero__lede">
-            This is where I share my journey—ideas, tools, and templates designed to help others learn, build, and grow. 
+            This is where I share my journey—ideas, tools, and templates designed to help others learn, build, and grow.
           </p>
 
           <div class="social-links">
             <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
-          </div>  
+          </div>
         </div>
+
       </div>
     </section>
 
     <section class="resources" aria-label="Resources">
       <div class="container">
         <h2 class="resources__title">What I Share</h2>
+
         <div class="resources__grid">
           <div class="resource_article">
             <div class="resource__icon"><i class="far fa-edit"></i></div>
@@ -73,26 +47,25 @@
               I write about tech, personal finance, growth, and strategies for recruiting and professional development.
             </p>
             <a href="articles.html" class="read-more">Read more →</a>
-        </div>
+          </div>
 
-        <div class="resource_article">
-          <div class="resource__icon"><i class="far fa-lightbulb"></i></div>
-          <h3 class="resource__title">Projects</h3>
-          <p class="resource__desc">
-            Hands-on initiatives and projects where I apply ideas, build tools, and explore different solutions.
-          </p>
-          <a href="projects.html" class="read-more">Read more →</a>
-        </div>
+          <div class="resource_article">
+            <div class="resource__icon"><i class="far fa-lightbulb"></i></div>
+            <h3 class="resource__title">Projects</h3>
+            <p class="resource__desc">
+              Hands-on initiatives and projects where I apply ideas, build tools, and explore different solutions.
+            </p>
+            <a href="projects.html" class="read-more">Read more →</a>
+          </div>
 
-        <div class="resource_article">
-          <div class="resource__icon"><i class="far fa-file-alt"></i></div>
-          <h3 class="resource__title">Templates</h3>
-          <p class="resource__desc">
-            Ready-to-use templates that maximize visibility and brings organization to different areas of life.
-          </p>
-          <a href="#" class="read-more">[Coming Soon]</a>
-        </div>
-
+          <div class="resource_article">
+            <div class="resource__icon"><i class="far fa-file-alt"></i></div>
+            <h3 class="resource__title">Templates</h3>
+            <p class="resource__desc">
+              Ready-to-use templates that maximize visibility and brings organization to different areas of life.
+            </p>
+            <a href="#" class="read-more">[Coming Soon]</a>
+          </div>
         </div>
       </div>
     </section>
@@ -102,7 +75,6 @@
     <section id="resources" aria-label="Resources"></section>
     <section id="templates" aria-label="Templates"></section>
   </main>
-
 
   <section id="contact">
     <div class="contact-container">
@@ -124,43 +96,17 @@
         <button type="submit">Send Message</button>
       </form>
 
-
       <p class="direct-email">
-        Can also reach me at 
+        Can also reach me at
         <a href="mailto:vincentweng011@gmail.com">vincentweng011@gmail.com</a>
       </p>
-
     </div>
   </section>
-  
-</section>
 
+  <!-- Footer  -->
+  <div data-include="partials/footer.html"></div>
 
-  <footer>
-    <div class="container footer__inner">
-      <ul class="social">
-        <li><a href="https://www.linkedin.com/in/vincentweng0/" target="_blank" rel="me">LinkedIn</a></li>
-        <li><a href="https://github.com/VAweng02" target="_blank" rel="me">GitHub</a></li>
-        <li><a href="https://medium.com/@vweng" target="_blank">Medium</a></li>
-      </ul>
-      <p class="copyright">© <span data-year>2025</span> Vincent Weng</p>
-    </div>
-  </footer>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navOverlay = document.querySelector('.nav-overlay');
-    const closeBtn = document.querySelector('.close-btn');
-
-    hamburger.addEventListener('click', () => {
-      navOverlay.classList.add('active');
-      hamburger.classList.add('hide');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      navOverlay.classList.remove('active');
-      hamburger.classList.remove('hide');
-    });
-  </script>
+  <script src="scripts/includes.js"></script>
+  <script src="scripts/site.js"></script>
 </body>
 </html>
