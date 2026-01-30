@@ -64,17 +64,20 @@ a:hover { opacity: 0.85; }
 /* ===========================
    Blog Page Layout
 =========================== */
+.blog-page > .container {
+  padding-top: 48px;
+  position: relative; /* needed for the full-bleed background layer */
+}
+
 .blog-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 48px;
-  padding: 48px 0;
-
-  position: relative; /* needed for the full-bleed background layer */
+  padding-bottom: 48px;
 }
 
-/* Option A: Full-bleed fade (spans the whole viewport width) */
-.blog-page .blog-layout::before {
+/* Full-bleed gradient fade behind the header area */
+.blog-page > .container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -97,7 +100,8 @@ a:hover { opacity: 0.85; }
 }
 
 /* make sure actual content sits above the gradient */
-.blog-page .blog-layout > * {
+.blog-page .post-header,
+.blog-page .blog-layout {
   position: relative;
   z-index: 1;
 }
@@ -171,18 +175,14 @@ a:hover { opacity: 0.85; }
 /* ===========================
    Table of Contents
 =========================== */
-/* TOC stays on screen at all times */
+/* TOC stays on screen while scrolling */
 .toc {
-  position: fixed;
-  top: 96px;                 /* below header */
-  right: 24px;               /* pinned to viewport right */
-  width: 280px;
+  position: sticky;
+  top: 88px;                 /* header (72px) + spacing */
+  align-self: start;         /* prevent grid stretch */
 
-  max-height: calc(100vh - 96px - 24px);
-  overflow: auto;
-  padding-right: 8px;
-
-  z-index: 10;
+  max-height: calc(100vh - 88px - 24px);
+  overflow-y: auto;
 }
 
 
@@ -224,15 +224,14 @@ a:hover { opacity: 0.85; }
 #toc a {
   display: block;
   padding: 6px 10px;
-  margin-left: -10px; /* lets the active segment tuck closer to the rail */
+  margin-left: -10px;
   border-radius: 10px;
+  position: relative;
 
   text-decoration: none;
   color: inherit;
   opacity: 0.7;
   line-height: 1.4;
-
-  border-left: 2px solid transparent; /* active segment uses this */
 }
 
 /* Hover */
@@ -241,13 +240,26 @@ a:hover { opacity: 0.85; }
   background: rgba(0,0,0,0.03);
 }
 
-/* Active: blue segment + slightly tinted background */
+/* Active: blue text + blue segment on rail */
 #toc a.active {
   opacity: 1;
   font-weight: 650;
+  color: rgba(56, 130, 246, 1);
+}
 
-  border-left-color: rgba(56, 130, 246, 1);
-  background: rgba(56, 130, 246, 0.08);
+#toc a.active::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(56, 130, 246, 1);
+}
+
+/* H3 items have 14px extra indent, compensate to keep indicator on the rail */
+#toc li.h3 a.active::before {
+  left: -20px; /* -6px - 14px */
 }
 
 
@@ -268,14 +280,19 @@ a:hover { opacity: 0.85; }
    Mobile Responsive
 =========================== */
 @media (max-width: 900px) {
+  .blog-page > .container {
+    padding-top: 28px;
+  }
+
   .blog-layout {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 28px 0;
+    padding-bottom: 28px;
   }
 
   .toc {
-    position: relative;
-    top: 0;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 }
