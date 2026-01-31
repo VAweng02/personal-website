@@ -31,7 +31,7 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -73,14 +73,14 @@ header .container {
 .hero {
   padding-top: 1rem;
   padding-bottom: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 
 }
 
 .hero-projects {
   padding-top: 1rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 
 }
@@ -290,18 +290,24 @@ header .container {
   box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
+.resource__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
 .resource__icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  color:#0b5394;
+  font-size: 1.25rem;
+  color: #0b5394;
+  line-height: 1;
 }
 
 .resource__title {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 0.75rem;
   text-align: left;
+  margin: 0;
 }
 
 .resource__desc {
@@ -390,7 +396,7 @@ header .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -493,7 +499,7 @@ header .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 2rem auto;
   text-align: left;
   justify-content: center;
@@ -503,7 +509,7 @@ header .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 2rem auto;
   text-align: left;
   justify-content: center;
@@ -513,7 +519,7 @@ header .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 2rem auto 0;
   text-align: left;
 }
@@ -615,13 +621,78 @@ header .container {
   color: #13497a;
 }
 
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pagination__numbers {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pagination__btn,
+.pagination__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination__btn:hover:not(.disabled),
+.pagination__num:hover:not(.active) {
+  background: #f3f4f6;
+  border-color: #ccc;
+}
+
+.pagination__num.active {
+  background: #1c65a6;
+  border-color: #1c65a6;
+  color: #fff;
+}
+
+.pagination__btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination__ellipsis {
+  padding: 0 0.25rem;
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .pagination__btn,
+  .pagination__num {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
 /* Mission banner */
 .mission-banner {
   background-color: #eef2f7;
   border-left: 6px solid #0a66c2;
   border-radius: 6px;
   padding: 1rem;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .mission-banner h3 {
@@ -648,10 +719,6 @@ header .container {
   }
 }
 
-.container {
-  max-width: 1000px;
-}
-
 
 
 
@@ -674,7 +741,7 @@ header .container {
 .timeline {
   position: relative;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 1100px;
 }
 
 .timeline::before {
