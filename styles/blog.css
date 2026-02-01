@@ -117,6 +117,32 @@ a:hover { opacity: 0.85; }
   margin-bottom: 32px;
 }
 
+/* Back to Articles link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.back-link:hover {
+  color: rgba(56, 130, 246, 1);
+  transform: translateX(-2px);
+}
+
+.back-link__arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.back-link__text {
+  line-height: 1;
+}
+
 .post-title {
   font-size: 2.25rem;
   line-height: 1.2;
@@ -130,6 +156,9 @@ a:hover { opacity: 0.85; }
   display: flex;
   gap: 10px;
   align-items: center;
+
+  margin-top: 0.4rem;      /* small space under title */
+  margin-bottom: 1.25rem;  /* breathing room before divider */
 }
 
 /* Paragraphs */

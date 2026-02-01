@@ -77,6 +77,83 @@
       </div>
     </section>
 
+    <section class="education" aria-label="Education">
+      <div class="container">
+        <h2 class="education__title">Education</h2>
+        <p class="education__subtitle">
+          I earned both my B.S. in Data Science & Economics and M.S. in Data Science at the University of Michigan.
+        </p>
+
+        <div class="education-toggle">
+          <button class="education-toggle__btn active" data-degree="bachelors">Bachelor's</button>
+          <button class="education-toggle__btn" data-degree="masters">Master's</button>
+        </div>
+
+        <div class="education-card">
+          <div class="education-panel active" data-panel="bachelors">
+            <div class="education-panel__section">
+              <h3 class="heading-with-icon"><i class="fas fa-bullseye"></i>Focus</h3>
+              <p>Statistics, Economics, Computer Science, and Applied Mathematics with emphasis on quantitative analysis and data-driven decision making.</p>
+            </div>
+            <div class="education-panel__section">
+              <h3 class="heading-with-icon"><i class="fas fa-book"></i>Key Coursework</h3>
+              <ul>
+                <li>Data Structures & Algorithms</li>
+                <li>Machine Learning</li>
+                <li>Database Systems</li>
+                <li>Applied Regression</li>
+                <li>Calculus & Linear Algebra</li>
+                <li>Econometrics</li>
+                <li>Game Theory</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="education-panel" data-panel="masters">
+            <div class="education-panel__section">
+              <h3 class="heading-with-icon"><i class="fas fa-bullseye"></i>Focus</h3>
+              <p>Machine Learning, Statistical Modeling, and Data Engineering with applications in product analytics and experimentation.</p>
+            </div>
+            <div class="education-panel__section">
+              <h3 class="heading-with-icon"><i class="fas fa-book"></i>Key Coursework</h3>
+              <ul>
+                <li>Probability & Distribution Theory</li>
+                <li>Statistical Inference</li>
+                <li>Statistical Machine Learning</li>
+                <li>Computational Methods</li>
+                <li>Large Language Models</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtns = document.querySelectorAll('.education-toggle__btn');
+        const panels = document.querySelectorAll('.education-panel');
+
+        toggleBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const degree = btn.dataset.degree;
+
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            panels.forEach(panel => {
+              if (panel.dataset.panel === degree) {
+                panel.classList.add('active');
+              } else {
+                panel.classList.remove('active');
+              }
+            });
+          });
+        });
+      });
+    </script>
+
 
   <!-- Footer -->
   <div data-include="partials/footer.html"></div>

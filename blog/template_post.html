@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><!-- POST_TITLE --></title>
+
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/blog.css">
+</head>
+
+<body class="blog-page">
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <header class="post-header">
+      <a href="/articles.html" class="back-link">
+        <span class="back-link__arrow">←</span>
+        <span class="back-link__text">Back to Articles</span>
+      </a>
+      <h1 class="post-title"><!-- POST_TITLE --></h1>
+
+      <div class="post-meta">
+        <span class="post-date"><!-- POST_DATE --></span>
+        <span class="post-dot">•</span>
+        <span class="post-readtime"><!-- POST_READTIME --></span>
+      </div>
+    </header>
+
+    <div class="blog-layout">
+      <article id="post-content" class="post">
+        <!-- POST_CONTENT -->
+      </article>
+
+      <aside class="toc">
+        <div class="toc-card">
+          <div class="toc-title">On this page</div>
+          <nav id="toc"></nav>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+
+  <script src="/scripts/includes.js"></script>
+  <script src="/scripts/site.js"></script>
+  <script src="/js/toc.js"></script>
+</body>
+</html>

@@ -1,28 +1,55 @@
-=<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vincent Weng</title>
+  <title>Contact - Vincent Weng</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Data Scientist. Writing on AI, growth, and knowledge systems. Resources and templates." />
 </head>
-<body class="contact-page">
-  <section id="contact">
-    <div class="contact-container">
-      <h2>Contact Me</h2>
-      <p class="contact-subtitle">
-        Let’s connect. Send me a message below and I’ll get back to you.
-      </p>
 
-      <form action="https://formspree.io/f/xygvnvaql" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+<body class="contact-page">
+  <div data-include="partials/header.html"></div>
+
+  <main>
+    <section id="contact" class="contact-section">
+      <div class="contact-header">
+        <h1>Contact Me</h1>
+        <p class="contact-subtitle">
+          Questions about data science careers, mentorship, or collaboration? Let's connect.
+        </p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <form action="https://formspree.io/f/xgvnvaql" method="POST" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <p class="direct-email">
+          Can also reach me at
+          <a href="mailto:vincentweng011@gmail.com">vincentweng011@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="scripts/includes.js"></script>
+  <script src="scripts/site.js"></script>
 </body>
 </html>
