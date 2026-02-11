@@ -481,15 +481,16 @@ header .container {
 }
 
 .categories .category {
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.35rem;
   border: none;
   border-radius: 999px;
   background-color: #f3f4f6;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .categories .category:hover {
@@ -837,16 +838,16 @@ header .container {
 }
 
 .education-toggle__btn {
-  padding: 0.6rem 1.5rem;
+  padding: 0.55rem 1.35rem;
   font-size: 0.9rem;
   font-weight: 500;
   font-family: inherit;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 999px;
   background-color: #fff;
   color: #555;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .education-toggle__btn:hover {
@@ -990,22 +991,42 @@ header .container {
   border-radius: 2px;
 }
 
+/* Backdrop */
+.nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.nav-backdrop.active {
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+}
+
 .nav-overlay {
   position: fixed;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
   height: 100%;
-  background: #eef2f7;
+  background: #fff;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  transition: left 0.3s ease;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
   z-index: 1000;
 }
 
 .nav-overlay.active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .nav-overlay .close-btn {
@@ -1019,18 +1040,47 @@ header .container {
 .nav-overlay ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0 0;
   width: 100%;
 }
 
 .nav-overlay li {
-  margin: 1.2rem 0;
+  margin-bottom: 24px;
 }
 
 .nav-overlay a {
   font-size: 1.25rem;
   font-weight: 500;
   color: #1c1c1c;
+  transition: color 0.2s ease;
+}
+
+.nav-overlay a:hover {
+  color: #1c65a6;
+}
+
+.nav-overlay a.active {
+  color: #1c65a6;
+  font-weight: 600;
+}
+
+/* Social icons at bottom of mobile nav */
+.nav-overlay__social {
+  margin-top: auto;
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.nav-overlay__social a {
+  font-size: 1.5rem;
+  color: #1c1c1c;
+  transition: color 0.2s ease;
+}
+
+.nav-overlay__social a:hover {
+  color: #1c65a6;
 }
 
 @media (max-width: 768px) {

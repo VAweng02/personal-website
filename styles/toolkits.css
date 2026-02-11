@@ -1,0 +1,124 @@
+/* ── Toolkits page ────────────────────────────────────────── */
+
+.toolkits-library {
+  padding-bottom: 3rem;
+}
+
+
+/* Card grid — 1 → 2 → 3 columns */
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .toolkit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .toolkit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.toolkit-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toolkit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Status label (top-right corner) */
+.toolkit-card__label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.toolkit-card__label--free {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.toolkit-card__label--paid {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.toolkit-card__label--soon {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Tag (e.g. Google Sheet / Template) */
+.toolkit-card__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0b5394;
+  margin-bottom: 0.5rem;
+}
+
+/* Title */
+.toolkit-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+
+/* Description */
+.toolkit-card__desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+/* CTA button — inherits .btn from main.css, tweaks here */
+.toolkit-card__btn {
+  align-self: flex-start;
+  text-decoration: none;
+  text-align: center;
+}
+
+.toolkit-card__btn--disabled {
+  background-color: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.toolkit-card__btn--disabled:hover {
+  background-color: #d1d5db;
+}
+
+.toolkit-card__btn--paid {
+  background-color: #e65100;
+}
+
+.toolkit-card__btn--paid:hover {
+  background-color: #bf4500;
+}
