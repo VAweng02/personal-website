@@ -31,7 +31,7 @@
   position: relative;
   background: #fff;
   border-radius: 1rem;
-  padding: 1.75rem 1.5rem 1.5rem;
+  overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -43,11 +43,51 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Status label (top-right corner) */
+/* Card image */
+.toolkit-card__img-link {
+  display: block;
+}
+
+.toolkit-card__img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #f0f0f0;
+  display: block;
+}
+
+.toolkit-card__img--placeholder {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 2;
+}
+
+.toolkit-card__img--placeholder span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+/* Card body (text content below image) */
+.toolkit-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Badges row — category left, status right */
+.toolkit-card__badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+/* Status label */
 .toolkit-card__label {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -78,7 +118,6 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #0b5394;
-  margin-bottom: 0.5rem;
 }
 
 /* Title */
@@ -95,7 +134,6 @@
   color: #555;
   line-height: 1.5;
   margin: 0 0 1.25rem;
-  flex: 1;
 }
 
 /* CTA button — inherits .btn from main.css, tweaks here */
@@ -121,4 +159,100 @@
 
 .toolkit-card__btn--paid:hover {
   background-color: #bf4500;
+}
+
+/* ── Toolkit Product Page ────────────────────────────────── */
+
+.toolkit-back {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0b5394;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.toolkit-back:hover {
+  color: #13497a;
+  text-decoration: underline;
+}
+
+.toolkit-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-bottom: 3rem;
+}
+
+.toolkit-preview img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: block;
+}
+
+.toolkit-details__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0b5394;
+  background: #eef2f7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.toolkit-details h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.toolkit-details__price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e7e34;
+  margin-bottom: 1rem;
+}
+
+.toolkit-details__desc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.toolkit-details__features {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.toolkit-details__features li {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+}
+
+.toolkit-details .btn {
+  font-size: 0.95rem;
+  padding: 0.65rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .toolkit-product {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .toolkit-preview img {
+    max-width: 100%;
+  }
 }

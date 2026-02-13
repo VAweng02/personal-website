@@ -9,6 +9,7 @@
  *   - description: one-sentence outcome
  *   - status: "live" | "coming_soon" | "paid"
  *   - url: link target (required for live/paid; ignored for coming_soon)
+ *   - image: preview image path (optional)
  */
 
 const TOOLKITS = [
@@ -18,9 +19,11 @@ const TOOLKITS = [
     tag: "Template",
     title: "Resume Template",
     description: "Standard and effective resume template.",
-    status: "coming_soon",
+    status: "live",
+    url: "/toolkits/resume-template.html",
+    image: "/assets/images/previews/resume-template.jpg",
   },
-  
+
   // ── Personal Systems ────────────────────────────────────
   {
     category: "personal",
@@ -70,14 +73,31 @@ function ctaMarkup(status, url) {
   return `<a href="${url || "#"}" class="btn toolkit-card__btn">Get Toolkit</a>`;
 }
 
+function imageMarkup(toolkit) {
+  if (!toolkit.image) {
+    return '<div class="toolkit-card__img toolkit-card__img--placeholder"><span>Coming Soon</span></div>';
+  }
+  const linkUrl = toolkit.url || "#";
+  const isClickable = toolkit.status !== "coming_soon";
+  if (isClickable) {
+    return `<a href="${linkUrl}" class="toolkit-card__img-link"><img class="toolkit-card__img" src="${toolkit.image}" alt="${toolkit.title} preview"></a>`;
+  }
+  return `<img class="toolkit-card__img" src="${toolkit.image}" alt="${toolkit.title} preview">`;
+}
+
 function buildCard(toolkit) {
   return `
     <div class="toolkit-card ${toolkit.category}">
-      <span class="toolkit-card__label ${statusLabelClass(toolkit.status)}">${statusLabel(toolkit.status)}</span>
-      <span class="toolkit-card__tag">${toolkit.tag}</span>
-      <h3 class="toolkit-card__title">${toolkit.title}</h3>
-      <p class="toolkit-card__desc">${toolkit.description}</p>
-      ${ctaMarkup(toolkit.status, toolkit.url)}
+      ${imageMarkup(toolkit)}
+      <div class="toolkit-card__body">
+        <div class="toolkit-card__badges">
+          <span class="toolkit-card__tag">${toolkit.tag}</span>
+          <span class="toolkit-card__label ${statusLabelClass(toolkit.status)}">${statusLabel(toolkit.status)}</span>
+        </div>
+        <h3 class="toolkit-card__title">${toolkit.title}</h3>
+        <p class="toolkit-card__desc">${toolkit.description}</p>
+        ${ctaMarkup(toolkit.status, toolkit.url)}
+      </div>
     </div>`;
 }
 
