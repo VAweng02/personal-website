@@ -29,10 +29,10 @@
 /* Card */
 .toolkit-card {
   position: relative;
-  background: #fff;
+  background: var(--color-surface);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--color-shadow-md);
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -40,7 +40,7 @@
 
 .toolkit-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 12px var(--color-shadow-lg);
 }
 
 /* Card image */
@@ -52,12 +52,12 @@
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: contain;
-  background: #f0f0f0;
+  background: var(--color-bg-alt);
   display: block;
 }
 
 .toolkit-card__img--placeholder {
-  background: #f0f0f0;
+  background: var(--color-bg-alt);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@
 .toolkit-card__img--placeholder span {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #9ca3af;
+  color: var(--color-text-faintest);
 }
 
 /* Card body (text content below image) */
@@ -101,14 +101,24 @@
   color: #1e7e34;
 }
 
+[data-theme="dark"] .toolkit-card__label--free {
+  background: #1a3a2a;
+  color: #6fcf97;
+}
+
 .toolkit-card__label--paid {
   background: #fff3e0;
   color: #e65100;
 }
 
+[data-theme="dark"] .toolkit-card__label--paid {
+  background: #3a2a1a;
+  color: #ffab70;
+}
+
 .toolkit-card__label--soon {
-  background: #f3f4f6;
-  color: #6b7280;
+  background: var(--color-pill-bg);
+  color: var(--color-text-faint);
 }
 
 /* Tag (e.g. Google Sheet / Template) */
@@ -117,7 +127,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #0b5394;
+  color: var(--color-brand);
 }
 
 /* Title */
@@ -131,7 +141,7 @@
 /* Description */
 .toolkit-card__desc {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.5;
   margin: 0 0 1.25rem;
 }
@@ -144,13 +154,13 @@
 }
 
 .toolkit-card__btn--disabled {
-  background-color: #d1d5db;
-  color: #6b7280;
+  background-color: var(--color-border);
+  color: var(--color-text-faint);
   cursor: not-allowed;
 }
 
 .toolkit-card__btn--disabled:hover {
-  background-color: #d1d5db;
+  background-color: var(--color-border);
 }
 
 .toolkit-card__btn--paid {
@@ -167,14 +177,14 @@
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #0b5394;
+  color: var(--color-brand);
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   transition: color 0.2s ease;
 }
 
 .toolkit-back:hover {
-  color: #13497a;
+  color: var(--color-brand-hover);
   text-decoration: underline;
 }
 
@@ -189,7 +199,7 @@
 .toolkit-preview img {
   max-width: 100%;
   height: auto;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   display: block;
 }
@@ -200,8 +210,8 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #0b5394;
-  background: #eef2f7;
+  color: var(--color-brand);
+  background: var(--color-accent-bg);
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   margin-bottom: 0.75rem;
@@ -221,9 +231,13 @@
   margin-bottom: 1rem;
 }
 
+[data-theme="dark"] .toolkit-details__price {
+  color: #6fcf97;
+}
+
 .toolkit-details__desc {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
@@ -236,7 +250,7 @@
 
 .toolkit-details__features li {
   font-size: 0.9rem;
-  color: #444;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 0.35rem;
 }

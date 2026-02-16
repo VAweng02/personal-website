@@ -10,8 +10,8 @@ html, body {
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: #fff;
-  color: #111;
+  background: var(--color-bg);
+  color: var(--color-text-dark);
 }
 
 /* Links */
@@ -30,7 +30,7 @@ a:hover { opacity: 0.85; }
    Header / Nav
 =========================== */
 .site-header {
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid var(--color-shadow);
 }
 
 .site-header .container {
@@ -92,7 +92,7 @@ a:hover { opacity: 0.85; }
     to bottom,
     rgba(56, 130, 246, 0.18),
     rgba(56, 130, 246, 0.10),
-    rgba(255, 255, 255, 0)
+    transparent
   );
 
   pointer-events: none;
@@ -123,7 +123,7 @@ a:hover { opacity: 0.85; }
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
-  color: #000;
+  color: var(--color-text);
   text-decoration: none;
   margin-bottom: 16px;
   transition: color 0.2s ease, transform 0.15s ease;
@@ -196,7 +196,7 @@ a:hover { opacity: 0.85; }
 .post code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.95em;
-  background: rgba(0,0,0,0.06);
+  background: var(--color-overlay);
   padding: 2px 6px;
   border-radius: 6px;
 }
@@ -234,7 +234,7 @@ a:hover { opacity: 0.85; }
   margin: 0;
 
   /* the gray vertical rail */
-  border-left: 2px solid rgba(0,0,0,0.08);
+  border-left: 2px solid var(--color-shadow);
   padding-left: 14px; /* spacing between rail and text */
 }
 
@@ -266,7 +266,7 @@ a:hover { opacity: 0.85; }
 /* Hover */
 #toc a:hover {
   opacity: 1;
-  background: rgba(0,0,0,0.03);
+  background: var(--color-overlay);
 }
 
 /* Active: blue text + blue segment on rail */
@@ -296,7 +296,7 @@ a:hover { opacity: 0.85; }
    Footer
 =========================== */
 .site-footer {
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid var(--color-shadow);
 }
 
 .site-footer .container {

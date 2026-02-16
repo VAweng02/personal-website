@@ -6,6 +6,7 @@
   <title>About — Vincent Weng</title>
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark");</script>
 </head>
 
 <body>
@@ -13,24 +14,16 @@
 
   <main>
      <section class="hero" aria-label="Introduction">
-      <div class="container hero__inner">
-        <div class="hero__photo_about">
-          <img src="img/scientist.png" alt="Vincent Weng profile picture">
-        </div>
+      <div class="container">
+        <h1 class="hero__title_about">About Me</h1>
+        <p class="hero__lede_about">
+          Data Scientist at Meta interested in product analytics, experimentation, AI automation, MLOps, and fintech.
+        </p>
 
-        <div class="hero__content">
-          <h1 class="hero__title_about">About Me</h1>
-          <p class="hero__lede_about">
-            I earned my Master’s in Data Science from the University of Michigan and currently work as a Data Scientist at Meta. 
-            I’m especially interested in product analytics, experimentation, AI automation, MLOps, and fintech.
-          </p>
-          
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
-          </div>
-          
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
         </div>
       </div>
     </section>

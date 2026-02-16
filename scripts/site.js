@@ -38,8 +38,23 @@ function initFooterYear() {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+function initDarkMode() {
+  var toggles = document.querySelectorAll(".theme-switch");
+  if (!toggles.length) return;
+
+  toggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      var next = isDark ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  });
+}
+
 // Header/footer are injected, so initialize after injection finishes
 document.addEventListener("partials:loaded", () => {
   initHamburgerMenu();
   initFooterYear();
+  initDarkMode();
 });
