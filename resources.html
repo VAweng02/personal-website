@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Toolkits — Vincent Weng</title>
+  <title>Resources — Vincent Weng</title>
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/toolkits.css">
+  <link rel="stylesheet" href="styles/resources.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Practical toolkits for data science, career growth, and personal optimization. Templates, frameworks, and dashboards by Vincent Weng." />
+  <meta name="description" content="Practical resources for data science, career growth, and personal optimization. Templates, frameworks, and dashboards by Vincent Weng." />
   <script>if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark");</script>
 </head>
 <body>
   <div data-include="partials/header.html"></div>
 
   <main>
-    <section class="hero" aria-label="Toolkits introduction">
+    <section class="hero" aria-label="Resources introduction">
       <div class="container">
-        <h1 class="hero__title_about">Toolkits</h1>
+        <h1 class="hero__title_about">Resources</h1>
         <p class="hero__lede_about">
           Practical templates and frameworks for career growth and personal optimization built from real-world experience.
         </p>
@@ -29,22 +29,22 @@
       </div>
     </section>
 
-    <section class="toolkits-library" aria-label="Toolkits">
+    <section class="resources-library" aria-label="Resources">
       <div class="container">
-        <div class="categories" role="tablist" aria-label="Filter toolkits">
+        <div class="categories" role="tablist" aria-label="Filter resources">
           <button class="category active" data-filter="all">All</button>
           <button class="category" data-filter="career">Career</button>
           <button class="category" data-filter="personal">Personal</button>
         </div>
 
-        <div class="toolkit-grid" id="toolkit-grid"></div>
+        <div class="resource-grid" id="resource-grid"></div>
       </div>
     </section>
   </main>
 
   <div data-include="partials/footer.html"></div>
 
-  <script src="scripts/toolkits.js"></script>
+  <script src="scripts/resources.js"></script>
   <script src="scripts/includes.js"></script>
   <script src="scripts/site.js"></script>
 </body>

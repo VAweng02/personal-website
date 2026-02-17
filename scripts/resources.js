@@ -1,18 +1,18 @@
 /**
- * Toolkits page — data-driven card rendering + category filtering.
+ * Resources page — data-driven card rendering + category filtering.
  *
- * To add or edit toolkits, modify the TOOLKITS array below.
+ * To add or edit resources, modify the RESOURCES array below.
  * Each entry needs: category, tag, title, description, status, and (optionally) url.
  *   - category: "career" | "data-science" | "personal"
  *   - tag: freeform label shown on the card (e.g. "Google Sheet", "Template")
- *   - title: toolkit name
+ *   - title: resource name
  *   - description: one-sentence outcome
  *   - status: "live" | "coming_soon" | "paid"
  *   - url: link target (required for live/paid; ignored for coming_soon)
  *   - image: preview image path (optional)
  */
 
-const TOOLKITS = [
+const RESOURCES = [
   // ── Career ──────────────────────────────────────────────
   {
     category: "career",
@@ -20,7 +20,7 @@ const TOOLKITS = [
     title: "Resume Template",
     description: "Standard and effective resume template.",
     status: "live",
-    url: "/toolkits/resume-template.html",
+    url: "/resources/resume-template.html",
     image: "/assets/images/previews/resume-template.jpg",
   },
 
@@ -53,11 +53,11 @@ function statusLabel(status) {
 function statusLabelClass(status) {
   switch (status) {
     case "live":
-      return "toolkit-card__label--free";
+      return "resource-card__label--free";
     case "paid":
-      return "toolkit-card__label--paid";
+      return "resource-card__label--paid";
     case "coming_soon":
-      return "toolkit-card__label--soon";
+      return "resource-card__label--soon";
     default:
       return "";
   }
@@ -65,38 +65,38 @@ function statusLabelClass(status) {
 
 function ctaMarkup(status, url) {
   if (status === "coming_soon") {
-    return '<button class="btn toolkit-card__btn toolkit-card__btn--disabled" disabled>Coming Soon</button>';
+    return '<button class="btn resource-card__btn resource-card__btn--disabled" disabled>Coming Soon</button>';
   }
   if (status === "paid") {
-    return `<a href="${url || "#"}" class="btn toolkit-card__btn toolkit-card__btn--paid">Buy</a>`;
+    return `<a href="${url || "#"}" class="btn resource-card__btn resource-card__btn--paid">Buy</a>`;
   }
-  return `<a href="${url || "#"}" class="btn toolkit-card__btn">Get Toolkit</a>`;
+  return `<a href="${url || "#"}" class="btn resource-card__btn">Get Resource</a>`;
 }
 
-function imageMarkup(toolkit) {
-  if (!toolkit.image) {
-    return '<div class="toolkit-card__img toolkit-card__img--placeholder"><span>Coming Soon</span></div>';
+function imageMarkup(resource) {
+  if (!resource.image) {
+    return '<div class="resource-card__img resource-card__img--placeholder"><span>Coming Soon</span></div>';
   }
-  const linkUrl = toolkit.url || "#";
-  const isClickable = toolkit.status !== "coming_soon";
+  const linkUrl = resource.url || "#";
+  const isClickable = resource.status !== "coming_soon";
   if (isClickable) {
-    return `<a href="${linkUrl}" class="toolkit-card__img-link"><img class="toolkit-card__img" src="${toolkit.image}" alt="${toolkit.title} preview"></a>`;
+    return `<a href="${linkUrl}" class="resource-card__img-link"><img class="resource-card__img" src="${resource.image}" alt="${resource.title} preview"></a>`;
   }
-  return `<img class="toolkit-card__img" src="${toolkit.image}" alt="${toolkit.title} preview">`;
+  return `<img class="resource-card__img" src="${resource.image}" alt="${resource.title} preview">`;
 }
 
-function buildCard(toolkit) {
+function buildCard(resource) {
   return `
-    <div class="toolkit-card ${toolkit.category}">
-      ${imageMarkup(toolkit)}
-      <div class="toolkit-card__body">
-        <div class="toolkit-card__badges">
-          <span class="toolkit-card__tag">${toolkit.tag}</span>
-          <span class="toolkit-card__label ${statusLabelClass(toolkit.status)}">${statusLabel(toolkit.status)}</span>
+    <div class="resource-card ${resource.category}">
+      ${imageMarkup(resource)}
+      <div class="resource-card__body">
+        <div class="resource-card__badges">
+          <span class="resource-card__tag">${resource.tag}</span>
+          <span class="resource-card__label ${statusLabelClass(resource.status)}">${statusLabel(resource.status)}</span>
         </div>
-        <h3 class="toolkit-card__title">${toolkit.title}</h3>
-        <p class="toolkit-card__desc">${toolkit.description}</p>
-        ${ctaMarkup(toolkit.status, toolkit.url)}
+        <h3 class="resource-card__title">${resource.title}</h3>
+        <p class="resource-card__desc">${resource.description}</p>
+        ${ctaMarkup(resource.status, resource.url)}
       </div>
     </div>`;
 }
@@ -104,19 +104,19 @@ function buildCard(toolkit) {
 /* ── Rendering & Filtering ───────────────────────────────── */
 
 function renderCards(filter) {
-  const grid = document.getElementById("toolkit-grid");
+  const grid = document.getElementById("resource-grid");
   if (!grid) return;
 
   const visible =
     filter === "all"
-      ? TOOLKITS
-      : TOOLKITS.filter((t) => t.category === filter);
+      ? RESOURCES
+      : RESOURCES.filter((t) => t.category === filter);
 
   grid.innerHTML = visible.map(buildCard).join("");
 }
 
-function initToolkits() {
-  const buttons = document.querySelectorAll(".toolkits-library .category");
+function initResources() {
+  const buttons = document.querySelectorAll(".resources-library .category");
   const params = new URLSearchParams(window.location.search);
   const initial = params.get("filter") || "all";
 
@@ -154,4 +154,4 @@ function initToolkits() {
   });
 }
 
-document.addEventListener("partials:loaded", initToolkits);
+document.addEventListener("partials:loaded", initResources);
