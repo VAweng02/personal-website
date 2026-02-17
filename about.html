@@ -13,134 +13,114 @@
   <div data-include="partials/header.html"></div>
 
   <main>
-     <section class="hero" aria-label="Introduction">
-      <div class="container">
-        <h1 class="hero__title_about">About Me</h1>
-        <p class="hero__lede_about">
-          Data Scientist at Meta interested in product analytics, experimentation, AI automation, MLOps, and fintech.
-        </p>
+    <section class="about-top" aria-label="About and Experience">
+      <div class="container about-top__grid">
 
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience" aria-label="Experience">
-      <div class="container">
-        <h2 class="experience__title">Experience</h2>
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <img src="img/meta.png" alt="Meta logo">
-            </div>
-            <div class="timeline-content">
-              <span class="timeline-date">2025 – Present</span>
-              <h3>Meta</h3>
-              <p>Data Scientist on Ads Signal Growth, focusing on product data science and experimentation.</p>
-            </div>
+        <div class="about-top__left">
+          <h1 class="about-top__title">About Me</h1>
+          <p class="about-top__bio">
+            Data Scientist at Meta with a Master’s in Data Science from the University of Michigan. 
+            Interested in product analytics, experimentation, AI automation, and MLOps.
+          <div class="social-links" style="justify-content: flex-start;">
+            <a href="https://www.linkedin.com/in/vincentweng0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/VAweng02" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://medium.com/@vweng" target="_blank"><i class="fab fa-medium"></i></a>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <img src="img/jpmc.png" alt="JPMC logo">
-            </div>
-            <div class="timeline-content">
-              <span class="timeline-date">Summer 2024</span>
-              <h3>JPMorgan Chase &amp; Co.</h3>
-              <p>Data Science Analyst on the Focused Analytics Solutions Team, focused on credit card competitor analysis.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <img src="img/umich.png" alt="UMich logo">
-            </div>
-            <div class="timeline-content">
-              <span class="timeline-date">2023 – 2024</span>
-              <h3>University of Michigan</h3>
-              <p>Developed neutron noise detection software and designed a pipeline for power plant outage forecasting.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="education" aria-label="Education">
-      <div class="container">
-        <h2 class="education__title">Education</h2>
-        <p class="education__subtitle">
-          I earned both my B.S. in Data Science & Economics and M.S. in Data Science at the University of Michigan.
-        </p>
-
-        <div class="education-toggle">
-          <button class="education-toggle__btn active" data-degree="bachelors">Bachelor's</button>
-          <button class="education-toggle__btn" data-degree="masters">Master's</button>
         </div>
 
-        <div class="education-card">
-          <div class="education-panel active" data-panel="bachelors">
-            <!-- <div class="education-panel__section">
-              <h3 class="heading-with-icon"><i class="fas fa-bullseye"></i>Focus</h3>
-              <p>Statistics, Economics, Computer Science, and Applied Mathematics with emphasis on quantitative analysis and data-driven decision making.</p>
-            </div> -->
-            <div class="education-panel__section">
-              <h3 class="heading-with-icon"><i class="fas fa-book"></i>Key Coursework</h3>
-              <ul>
-                <li>Data Structures & Algorithms</li>
-                <li>Machine Learning</li>
-                <li>Database Systems</li>
-                <li>Applied Regression</li>
-                <li>Calculus & Linear Algebra</li>
-                <li>Econometrics</li>
-                <li>Game Theory</li>
-              </ul>
+        <div class="about-top__right">
+          <div class="about-toggle">
+            <button class="about-toggle__btn active" data-tab="experience"><i class="fas fa-briefcase"></i> Experience</button>
+            <button class="about-toggle__btn" data-tab="education"><i class="fas fa-graduation-cap"></i> Education</button>
+          </div>
+
+          <div class="about-tab-panel active" data-panel="experience">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <img src="img/meta.png" alt="Meta logo">
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 – Present</span>
+                  <h3>Meta</h3>
+                  <p class="timeline-role">Data Scientist</p>
+                  <p class="timeline-team">Ads Signal Growth</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <img src="img/jpmc.png" alt="JPMC logo">
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Summer 2024</span>
+                  <h3>JPMorgan Chase &amp; Co.</h3>
+                  <p class="timeline-role">Data Science Analyst</p>
+                  <p class="timeline-team">Focused Analytics Solutions Team</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="education-panel" data-panel="masters">
-            <!-- <div class="education-panel__section">
-              <h3 class="heading-with-icon"><i class="fas fa-bullseye"></i>Focus</h3>
-              <p>Machine Learning, Statistical Modeling, and Data Engineering with applications in product analytics and experimentation.</p>
-            </div> -->
-            <div class="education-panel__section">
-              <h3 class="heading-with-icon"><i class="fas fa-book"></i>Key Coursework</h3>
-              <ul>
-                <li>Probability & Distribution Theory</li>
-                <li>Statistical Inference</li>
-                <li>Statistical Machine Learning</li>
-                <li>Computational Methods</li>
-                <li>Large Language Models</li>
-              </ul>
+          <div class="about-tab-panel" data-panel="education">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <img src="img/umich.png" alt="University of Michigan logo">
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 – 2025</span>
+                  <h3>M.S. Data Science</h3>
+                  <h4 class="timeline-coursework-heading">Key Coursework</h4>
+                  <ul class="timeline-coursework">
+                    <li>Probability &amp; Distribution Theory</li>
+                    <li>Statistical Inference</li>
+                    <li>Statistical Machine Learning</li>
+                    <li>Computational Methods</li>
+                    <li>Large Language Models</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <img src="img/umich.png" alt="University of Michigan logo">
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2020 – 2024</span>
+                  <h3>B.S. Data Science, Economics</h3>
+                  <h4 class="timeline-coursework-heading">Key Coursework</h4>
+                  <ul class="timeline-coursework">
+                    <li>Data Structures &amp; Algorithms</li>
+                    <li>Machine Learning</li>
+                    <li>Database Systems</li>
+                    <li>Applied Regression</li>
+                    <li>Calculus &amp; Linear Algebra</li>
+                    <li>Econometrics</li>
+                    <li>Game Theory</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtns = document.querySelectorAll('.education-toggle__btn');
-        const panels = document.querySelectorAll('.education-panel');
+      document.addEventListener('DOMContentLoaded', function () {
+        const btns = document.querySelectorAll('.about-toggle__btn');
+        const panels = document.querySelectorAll('.about-tab-panel');
 
-        toggleBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const degree = btn.dataset.degree;
-
-            toggleBtns.forEach(b => b.classList.remove('active'));
+        btns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var tab = btn.dataset.tab;
+            btns.forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
-
-            panels.forEach(panel => {
-              if (panel.dataset.panel === degree) {
-                panel.classList.add('active');
-              } else {
-                panel.classList.remove('active');
-              }
+            panels.forEach(function (p) {
+              p.classList.toggle('active', p.dataset.panel === tab);
             });
           });
         });

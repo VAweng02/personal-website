@@ -787,22 +787,72 @@ header .container {
 
 
 
-.experience {
-  padding: 1rem 1rem;
-  background-color: var(--color-bg-alt);
+/* ---------- About Top (two-column) ---------- */
+.about-top {
+  padding: 3.5rem 0 1rem;
+  background-color: var(--color-bg);
 }
 
-.experience__title {
-  font-size: 1.5rem;
+.about-top__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-top__title {
+  font-size: 2rem;
   font-weight: 600;
-  text-align: center;
   color: var(--color-text);
+  margin: 0 0 1rem;
+}
+
+.about-top__bio {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.about-top__right .timeline {
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .about-top__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-top__left {
+    text-align: center;
+  }
+
+  .about-top__bio {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-top__left .social-links {
+    justify-content: center !important;
+  }
+
+  .about-top__title {
+    text-align: center;
+  }
+
+  .about-toggle {
+    justify-content: center;
+  }
 }
 
 .timeline {
   position: relative;
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 800px;
 }
 
 .timeline::before {
@@ -812,7 +862,7 @@ header .container {
   bottom: 0;
   left: 24px;
   width: 2px;
-  background: var(--color-brand-accent);
+  background: var(--color-border);
 }
 
 .timeline-item {
@@ -825,7 +875,7 @@ header .container {
 .timeline-icon {
   width: 50px;
   height: 50px;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -838,7 +888,7 @@ header .container {
 }
 
 .timeline-content {
-  margin-left: 2.5rem;
+  margin-left: 1rem;
 }
 
 .timeline-date {
@@ -846,13 +896,28 @@ header .container {
   font-weight: 500;
   color: var(--color-text-faint);
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 
 .timeline-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.35rem;
+}
+
+.timeline-role {
+  margin: 0 0 0.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.timeline-team {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+  line-height: 1.4;
 }
 
 .timeline-content p {
@@ -862,145 +927,72 @@ header .container {
   font-size: 0.9rem;
 }
 
-/* ---------- Education Section ---------- */
-.education {
-  padding: 2rem 1rem 2.5rem;
-  background-color: var(--color-bg);
-}
-
-.education__title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-
-.education__subtitle {
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  margin: 0 auto 1.5rem;
-  max-width: 600px;
-}
-
-.education-toggle {
+/* ---------- About Toggle (Experience/Education) ---------- */
+.about-toggle {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.education-toggle__btn {
-  padding: 0.55rem 1.35rem;
-  font-size: 0.9rem;
+.about-toggle__btn {
+  padding: 0;
+  font-size: 0.95rem;
   font-weight: 500;
   font-family: inherit;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  background-color: var(--color-surface);
-  color: var(--color-text-muted);
+  border: none;
+  background: none;
+  color: var(--color-text-faint);
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-.education-toggle__btn:hover {
-  border-color: var(--color-brand-hover);
-  color: var(--color-brand-hover);
+.about-toggle__btn:hover {
+  color: var(--color-brand);
 }
 
-.education-toggle__btn.active {
-  background-color: var(--color-brand-hover);
-  border-color: var(--color-brand-hover);
-  color: #fff;
+.about-toggle__btn.active {
+  color: var(--color-brand);
+  font-weight: 600;
 }
 
-.education-card {
-  max-width: 650px;
-  margin: 0 auto;
-  background: var(--color-surface);
-  border: 1px solid var(--color-shadow);
-  border-radius: 12px;
-  padding: 1.75rem 2rem;
-  box-shadow: 0 2px 8px var(--color-overlay);
+.about-toggle__btn i {
+  margin-right: 0.1rem;
 }
 
-.education-panel {
+.about-tab-panel {
   display: none;
   opacity: 0;
   transition: opacity 0.25s ease;
 }
 
-.education-panel.active {
+.about-tab-panel.active {
   display: block;
   opacity: 1;
 }
 
-.education-panel__section {
-  margin-bottom: 1.25rem;
-}
-
-.education-panel__section:last-child {
-  margin-bottom: 0;
-}
-
-.education-panel__section h3 {
-  font-size: 1rem;
+/* Coursework list inside education timeline */
+.timeline-coursework-heading {
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-text);
-  margin: 0 0 0.5rem;
-}
-
-.heading-with-icon {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.heading-with-icon i {
-  font-size: 0.9rem;
   color: var(--color-text-faint);
-  flex-shrink: 0;
+  margin: 0.5rem 0 0.3rem;
 }
 
-.education-panel__section p {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+.timeline-coursework {
   margin: 0;
-}
-
-.education-panel__section ul {
-  margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 1.15rem;
   list-style: disc;
 }
 
-.education-panel__section ul li {
-  font-size: 0.9rem;
+.timeline-coursework li {
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
-  line-height: 1.6;
-  margin-bottom: 0.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.15rem;
 }
 
-.education-panel__section ul li:last-child {
+.timeline-coursework li:last-child {
   margin-bottom: 0;
-}
-
-@media (max-width: 600px) {
-  .education-toggle {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .education-toggle__btn {
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .education-card {
-    padding: 1.25rem 1.5rem;
-  }
 }
 
 
