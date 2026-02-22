@@ -126,6 +126,9 @@ header .container {
 
 .nav__list a:hover {
   color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
 }
 
 /* ---------- Hero ---------- */
